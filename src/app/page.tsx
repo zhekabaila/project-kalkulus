@@ -1,12 +1,14 @@
-export default function Home() {
+import Calculator from '@/components/Calculator'
+import Hero from '@/components/Hero'
+
+const Home = () => {
   return (
-    <iframe
-      src="https://www.geogebra.org/graphing/hxf84wba?embed"
-      width={800}
-      height={600}
-      allowFullScreen={true}
-      style={{ border: '1px solid #e4e4e4', borderRadius: '4px' }}
-      frameBorder="0"
-    />
+    <main className="px-36">
+      <Hero />
+      <section className="bg-white/10 border border-solid border-white/20 p-5 rounded-lg"></section>
+      {/* <Calculator /> */}
+    </main>
   )
 }
+
+export default Home
