@@ -27,7 +27,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="flex items-center justify-center fixed top-0 right-0 left-0">
+    <nav className="flex items-center justify-center fixed top-0 right-0 left-0 z-50">
       <div className="grid grid-cols-3 gap-x-3 mt-5 w-full">
         <div className="flex items-center justify-end">
           <div
@@ -51,7 +51,7 @@ const Navbar = () => {
         >
           <ul className="flex items-center justify-center gap-x-9">
             <li>
-              <Link href="#" className="font-medium">
+              <Link href="#tentang" className="font-medium">
                 About
               </Link>
             </li>
