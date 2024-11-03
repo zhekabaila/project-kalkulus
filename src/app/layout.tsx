@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import Navbar from '@/components/layouts/sections/Navbar'
+import Footer from '@/components/layouts/sections/Footer'
 import type { Metadata } from 'next'
 import './globals.css'
 

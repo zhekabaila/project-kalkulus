@@ -11,8 +11,8 @@ const About = () => {
       </div>
       <div>
         <h2 className="text-center text-5xl font-bold">Tentang</h2>
-        <div className="mt-6 grid grid-cols-2 gap-x-10">
-          <div className="mt-20">
+        <div className="grid grid-cols-2 gap-x-10">
+          <div className="mt-24">
             <h3 className="text-2xl font-medium text-blue-500">
               Latar Belakang
             </h3>

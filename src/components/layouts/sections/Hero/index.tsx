@@ -33,10 +33,10 @@ const Hero = () => {
           <span className="text-blue-500">Website</span> Kami!
         </h1>
         <p className="text-lg text-center mt-8 max-w-5xl mx-auto">
-          Pelajari konsep fungsi Trigonometri dengan mudah dan menyenangkan!
-          Kami menyediakan penjelasan lengkap, contoh soal, dan kalkulator
-          interaktif untuk membantu Anda memahami materi trigonometri dalam
-          kalkulus secara menyeluruh.
+          Panduan lengkap mengenai fungsi trigonometri yang mencakup penjelasan
+          tentang fungsi dasar seperti sinus, cosinus, dan tangen. Situs ini
+          menyediakan rumus-rumus penting, grafik fungsi, contoh soal, serta
+          kalkulator interaktif yang dapat memudahkan anda.
         </p>
         <div className="flex items-center justify-center gap-x-6 mt-6">
           <Link
@@ -46,9 +46,6 @@ const Hero = () => {
             <p className="text-white text-lg font-medium">Jelajahi</p>
             <IoArrowDownCircleOutline size={24} color="#ffffff" />
           </Link>
-          {/* <Link href="#" className="bg-transparent border border-blue-500 px-5 py-3 rounded-full">
-            <p className="text-black text-lg font-medium">Jelajahi</p>
-          </Link> */}
         </div>
       </div>
     </section>
