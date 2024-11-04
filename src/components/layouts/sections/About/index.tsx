@@ -3,7 +3,7 @@ import Image from 'next/image'
 const About = () => {
   return (
     <section
-      className="relative flex items-center justify-center px-36 h-screen border-t-4 border-t-blue-500 bg-gradient-to-r from-blue-500/20"
+      className="relative flex items-center justify-center px-36 h-screen border-t-4 border-t-blue-500"
       id="tentang"
     >
       <div className="absolute top-0 right-0 -z-40 rotate-180 transform scale-y-[-1]">

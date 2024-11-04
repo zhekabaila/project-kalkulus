@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Trigonometry Calculator</title>
+  </head>
+  <body>
+    <!-- GeoGebra Applet Container -->
+    <div id="ggb-element"></div>
+
+    <!-- Custom Input and Button -->
+    <input
+      type="text"
+      id="functionInput"
+      placeholder="Enter function, e.g., sin(x)"
+    />
+    <button onclick="updateGraph()">Plot</button>
+
+    <!-- GeoGebra Script -->
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script>
+      // Initialize the GeoGebra applet
+      var params = {
+        appName: 'graphing',
+        width: 800,
+        height: 600,
+        showToolBar: true,
+        showAlgebraInput: true,
+        showMenuBar: true,
+      }
+      var ggbApplet = new GGBApplet(params, true)
+
+      // Inject the GeoGebra applet into the div with ID 'ggb-element' on page load
+      window.addEventListener('load', function () {
+        ggbApplet.inject('ggb-element')
+      })
+
+      // Function to update the graph with a custom function
+      function updateGraph() {
+        var input = document.getElementById('functionInput').value // Get the input value
+        if (input) {
+          // Check if input is not empty
+          ggbApplet.evalCommand(input) // Set the function in GeoGebra
+        }
+      }
+    </script>
+  </body>
+</html>

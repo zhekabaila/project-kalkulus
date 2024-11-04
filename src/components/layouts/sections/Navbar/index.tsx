@@ -29,7 +29,8 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-center gap-x-2 fixed top-0 right-0 left-0 z-50 pt-5">
-      <div
+      <a
+        href="#hero"
         className={`flex items-center gap-x-3 ${
           blurNavbar ? 'bg-white/20 backdrop-blur-2xl' : 'bg-white'
         } border border-solid border-black/20 p-5 rounded-r-3xl rounded-l-full`}
@@ -41,7 +42,7 @@ const Navbar = () => {
           alt="Logo"
         />
         <h1 className="text-base font-medium">Trigonometry</h1>
-      </div>
+      </a>
 
       <ul
         className={`flex items-center justify-center gap-x-9 w-auto ${
