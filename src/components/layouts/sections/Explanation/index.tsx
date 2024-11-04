@@ -50,7 +50,7 @@ const Explanation = () => {
             id="fungsi-linear"
           >
             <div className="flex flex-row gap-x-20">
-              <div className="basis-1/2 space-y-6 text-lg font-base text-justify">
+              <div className="basis-1/ space-y-6 text-lg font-base text-justify">
                 <h3 className="text-3xl font-semibold">
                   Fungsi <span className="text-blue-500">Linear</span>
                 </h3>

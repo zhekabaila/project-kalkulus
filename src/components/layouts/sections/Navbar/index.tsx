@@ -9,6 +9,7 @@ import { menus } from '@/constant/manus'
 
 const Navbar = () => {
   const [blurNavbar, setBlurNavbar] = useState<boolean>(false)
+  const [theme, setTheme] = useState<string>('light')
 
   // Fungsi untuk menangani perubahan scroll
   const handleScroll = () => {
@@ -21,6 +22,12 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
+    const storedTheme = localStorage.getItem('theme')
+    if (storedTheme) {
+      setTheme(storedTheme)
+    } else {
+      setTheme('light')
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -62,7 +69,13 @@ const Navbar = () => {
           blurNavbar ? 'bg-white/20 backdrop-blur-2xl' : 'bg-white'
         } border border-solid border-black/20 p-5 rounded-l-3xl rounded-r-full`}
       >
-        <button type="button">
+        <button
+          type="button"
+          onClick={() => {
+            setTheme((e) => (e === 'light' ? 'night' : 'light'))
+            localStorage.setItem('theme', `${theme}`)
+          }}
+        >
           <IoIosMoon size={28} />
         </button>
       </div>
