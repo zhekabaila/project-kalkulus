@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      {/* <About /> */}
+      <About />
       <Explanation />
       <Calculator />
       <Members />
