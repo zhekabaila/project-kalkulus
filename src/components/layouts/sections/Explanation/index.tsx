@@ -5,13 +5,22 @@ import Link from 'next/link'
 const Explanation = () => {
   return (
     <section
-      className="relative flex items-center justify-center p-36 bg-[#cccfd9] border-t-4 border-t-blue-500"
+      className="relative flex items-center justify-center p-36 border-t-4 border-t-blue-500"
       id="penjelasan"
     >
+      <div className="absolute inset-0 size-full -z-40">
+        <Image
+          src="/images/abstract-line.svg"
+          alt="dqw"
+          width={1000}
+          height={1000}
+          className="size-full"
+        />
+      </div>
       <div className="size-full">
         <h2 className="text-center text-5xl font-bold">Penjelasan</h2>
         <div className="grid grid-cols-2 mt-20 gap-20">
-          <div className="space-y-7 bg-white backdrop-blur-lg rounded-xl border-2 border-white/30 p-16">
+          <div className="space-y-7 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16">
             <h3 className="text-3xl font-semibold">
               Apa itu <span className="text-blue-500">fungsi?</span>
             </h3>
@@ -25,7 +34,7 @@ const Explanation = () => {
               dengan input tersebut.
             </p>
           </div>
-          <div className="space-y-7 bg-white backdrop-blur-lg rounded-xl border-2 border-white/30 p-16">
+          <div className="space-y-7 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16">
             <h3 className="text-3xl font-semibold">
               Ada berapa jenis <span className="text-blue-500">fungsi?</span>
             </h3>
@@ -46,7 +55,7 @@ const Explanation = () => {
             </div>
           </div>
           <div
-            className="col-span-2 space-y-9 bg-white backdrop-blur-lg rounded-xl border-2 border-white/30 p-16"
+            className="col-span-2 space-y-9 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16"
             id="fungsi-linear"
           >
             <div className="flex flex-row gap-x-20">
@@ -127,7 +136,7 @@ const Explanation = () => {
             </div>
           </div>
           <div
-            className="col-span-2 space-y-9 bg-white backdrop-blur-lg rounded-xl border-2 border-white/30 p-16"
+            className="col-span-2 space-y-9 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16"
             id="fungsi-kuadrat"
           >
             <div className="flex flex-row-reverse gap-x-20">
