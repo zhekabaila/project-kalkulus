@@ -18,7 +18,7 @@ const Explanation = () => {
 
   return (
     <section
-      className="relative flex items-center justify-center p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      className="relative flex items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
       id="penjelasan"
     >
       <div className="absolute inset-0 size-full -z-40">
@@ -41,11 +41,11 @@ const Explanation = () => {
         )}
       </div>
       <div className="size-full">
-        <h2 className="text-center text-5xl font-bold dark:text-jeruk">
+        <h2 className="text-center text-3xl lg:text-5xl font-bold dark:text-jeruk">
           Penjelasan
         </h2>
         <div className="grid grid-cols-2 mt-20 gap-20">
-          <div className="space-y-7 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16">
+          <div className="col-span-2 lg:col-span-1 space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-16">
             <h3 className="text-3xl font-semibold dark:text-sun">
               Apa itu{' '}
               <span className="text-blue-500 dark:text-jeruk">fungsi?</span>
@@ -60,7 +60,7 @@ const Explanation = () => {
               dengan input tersebut.
             </p>
           </div>
-          <div className="space-y-7 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16">
+          <div className="col-span-2 lg:col-span-1 space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-16">
             <h3 className="text-3xl font-semibold dark:text-sun">
               Ada berapa jenis{' '}
               <span className="text-blue-500 dark:text-jeruk">fungsi?</span>
