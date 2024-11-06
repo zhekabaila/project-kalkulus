@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   description: 'Trignonemetry',
 }
 
-export default function Home({}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function Home() {
   return (
     <html lang="en">
       <body
