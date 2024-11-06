@@ -1,22 +1,19 @@
-import Image from "next/image";
-
 const About = () => {
   return (
     <section
-      className="relative flex items-center justify-center px-36 min-h-screen border-t-4 border-t-blue-500 py-20"
+      className="relative flex items-center justify-center px-36 min-h-screen border-t-4 border-t-blue-500 dark:border-t-jeruk py-20"
       id="tentang"
     >
-      <div className="absolute top-0 right-0 -z-40 rotate-180 transform scale-y-[-1]">
-        <Image src="/icons/split.svg" width={200} height={200} alt="" />
-      </div>
       <div>
-        <h2 className="text-center text-5xl font-bold">Tentang</h2>
+        <h2 className="text-center text-5xl font-bold dark:text-jeruk">
+          Tentang
+        </h2>
         <div className="grid grid-cols-2 gap-x-10">
           <div className="mt-24">
-            <h3 className="text-2xl font-medium text-blue-500">
+            <h3 className="text-2xl font-medium text-blue-500 dark:text-jeruk">
               Latar Belakang
             </h3>
-            <p className="text-lg font-medium mt-3">
+            <p className="text-lg font-medium mt-3 dark:text-sun">
               Pembuatan website ini dilatarbelakangi dengan adanya projekan
               tugas akhir kalkulus yang dilakukan secara berkelompok, dengan
               ketentuan membebaskan setiap kelompok untuk membuat projekan apa
@@ -28,10 +25,10 @@ const About = () => {
             </p>
           </div>
           <div className="mt-20">
-            <h3 className="text-2xl font-medium text-blue-500">
+            <h3 className="text-2xl font-medium text-blue-500 dark:text-jeruk">
               Fungsi Website
             </h3>
-            <p className="text-lg font-medium mt-3">
+            <p className="text-lg font-medium mt-3 dark:text-sun">
               Website ini berfungsi sebagai media digital yang mampu meyediakan
               informasi materi fungsi Kakulus 1 secara lengkap, yang apat di
               akses secara cepat, mudah diakses kapan saja dan dimana saja.
@@ -45,10 +42,10 @@ const About = () => {
             </p>
           </div>
           <div className="mt-20">
-            <h3 className="text-2xl font-medium text-blue-500">
+            <h3 className="text-2xl font-medium text-blue-500 dark:text-jeruk">
               Ada Apa Saja Di sini?
             </h3>
-            <p className="text-lg font-medium mt-3">
+            <p className="text-lg font-medium mt-3 dark:text-sun">
               Di website ini terdapat suatu informasi yang dapat user cari
               dengan cara yang mudah, cepat dan dapat di akses dimana saja.
               Untuk mahasiswa atau siswa yang mendapatkan kesulitan dalam
@@ -64,7 +61,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

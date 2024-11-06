@@ -1,17 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
-import { IoIosMoon } from 'react-icons/io'
+import { IoIosMoon, IoIosSunny } from 'react-icons/io'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { menus } from '@/constant/manus'
+import { useTheme } from '@/contexts/themeContext'
 
 const Navbar = () => {
   const [blurNavbar, setBlurNavbar] = useState<boolean>(false)
-  const [theme, setTheme] = useState<string>('light')
+  const { darkMode, toggleTheme } = useTheme()
 
-  // Fungsi untuk menangani perubahan scroll
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setBlurNavbar(true)
@@ -22,12 +22,6 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-    const storedTheme = localStorage.getItem('theme')
-    if (storedTheme) {
-      setTheme(storedTheme)
-    } else {
-      setTheme('light')
-    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -39,26 +33,41 @@ const Navbar = () => {
       <a
         href="#hero"
         className={`flex items-center gap-x-3 ${
-          blurNavbar ? 'bg-white/20 backdrop-blur-2xl' : 'bg-white'
+          blurNavbar
+            ? 'bg-white/20 dark:bg-black/20 backdrop-blur-2xl'
+            : 'bg-white dark:bg-[#2c2e30]'
         } border border-solid border-black/20 p-5 rounded-r-3xl rounded-l-full`}
       >
-        <Image
-          src="/logo/android-chrome-512x512.png"
-          width={30}
-          height={30}
-          alt="Logo"
-        />
-        <h1 className="text-base font-medium">Trigonometry</h1>
+        {darkMode ? (
+          <Image
+            src="/logo/main-logo-dark.png"
+            width={30}
+            height={30}
+            alt="Logo"
+          />
+        ) : (
+          <Image
+            src="/logo/main-logo-light.png"
+            width={30}
+            height={30}
+            alt="Logo"
+          />
+        )}
+        <h1 className="text-base font-medium dark:text-[#F5F5F5]">
+          Trigonometry
+        </h1>
       </a>
 
       <ul
         className={`flex items-center justify-center gap-x-9 w-auto ${
-          blurNavbar ? 'bg-white/20 backdrop-blur-2xl' : 'bg-white'
+          blurNavbar
+            ? 'bg-white/20 dark:bg-black/20 backdrop-blur-2xl'
+            : 'bg-white dark:bg-[#2c2e30]'
         } border border-solid border-black/20 py-[23px] px-8 rounded-lg`}
       >
         {menus.map(({ name, link }, key) => (
           <li key={key}>
-            <Link href={link} className="font-medium">
+            <Link href={link} className="font-medium dark:text-[#F5F5F5]">
               {name}
             </Link>
           </li>
@@ -66,17 +75,17 @@ const Navbar = () => {
       </ul>
       <div
         className={`flex items-center gap-x-3 ${
-          blurNavbar ? 'bg-white/20 backdrop-blur-2xl' : 'bg-white'
+          blurNavbar
+            ? 'bg-white/20 dark:bg-black/20 backdrop-blur-2xl'
+            : 'bg-white dark:bg-[#2c2e30]'
         } border border-solid border-black/20 p-5 rounded-l-3xl rounded-r-full`}
       >
-        <button
-          type="button"
-          onClick={() => {
-            setTheme((e) => (e === 'light' ? 'night' : 'light'))
-            localStorage.setItem('theme', `${theme}`)
-          }}
-        >
-          <IoIosMoon size={28} />
+        <button type="button" onClick={toggleTheme}>
+          {!darkMode ? (
+            <IoIosMoon size={28} />
+          ) : (
+            <IoIosSunny size={28} color="#F5F5F5" />
+          )}
         </button>
       </div>
     </nav>
