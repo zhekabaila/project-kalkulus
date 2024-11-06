@@ -1,12 +1,14 @@
-import Linear from '@/components/common/Cards/Function/linear'
-import Kuadrat from '@/components/common/Cards/Function/kuadrat'
 import { functionTypes } from '@/constant/functionTypes'
+import {
+  Eksponensial,
+  Kuadrat,
+  Linear,
+  Logaritma,
+  Rasional,
+  Trigonometri,
+} from '@/components/common/Cards/Function'
 import Image from 'next/image'
 import Link from 'next/link'
-import Eksponensial from '@/components/common/Cards/Function/eksponensial'
-import Logaritma from '@/components/common/Cards/Function/logaritma'
-import Trigonometri from '@/components/common/Cards/Function/trigonometri'
-import Rasional from '@/components/common/Cards/Function/rasional'
 
 const Explanation = () => {
   return (
@@ -65,8 +67,7 @@ const Explanation = () => {
           <Eksponensial />
           <Logaritma />
           <Trigonometri />
-          <Rasional/>
-
+          <Rasional />
         </div>
       </div>
     </section>

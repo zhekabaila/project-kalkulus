@@ -9,7 +9,16 @@ const Hero = () => {
       id="hero"
     >
       <div className="relative size-full">
-        <div className="absolute bottom-0 right-0 -z-40">
+        <div className="absolute inset-0 size-full">
+          <Image
+            src="/images/wave.svg"
+            width={1000}
+            height={1000}
+            alt="wave"
+            className="size-full"
+          />
+        </div>
+        {/* <div className="absolute bottom-0 right-0 -z-40">
           <Image
             src="/images/cube-pyramid.svg"
             alt="asd"
@@ -22,7 +31,7 @@ const Hero = () => {
         </div>
         <div className="absolute bottom-0 left-0 -z-40">
           <Image src="/images/ball.svg" alt="asd" width={500} height={500} />
-        </div>
+        </div> */}
         <div className="flex flex-col items-center justify-center bg-gray-500/10 backdrop-blur-lg rounded-2xl size-full border-2 border-gray-500/20">
           <h1 className="text-center font-medium text-7xl leading-tight">
             Selamat Datang Di <br />

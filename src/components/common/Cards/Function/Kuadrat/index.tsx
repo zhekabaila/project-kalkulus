@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const Kuadrat = () => {
+export const Kuadrat = () => {
   return (
     <div
       className="col-span-2 space-y-9 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16"
@@ -88,5 +88,3 @@ const Kuadrat = () => {
     </div>
   )
 }
-
-export default Kuadrat

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const Eksponensial = () => {
+export const Eksponensial = () => {
   return (
     <div
       className="col-span-2 space-y-9 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16"
@@ -66,14 +66,14 @@ const Eksponensial = () => {
                 </li>
                 <li>
                   <span className="font-bold">
-                    Nilai f(x) Tidak Pernah Negatif:
+                    Nilai f(x) Tidak Pernah Negatif:{' '}
                   </span>
                   Jika a{'>'}0 dan b{'>'}0, maka f(x) tidak akan pernah menjadi
                   negatif atau nol.
                 </li>
                 <li>
                   <span className="font-bold">
-                    Tidak Memiliki Sumbu Simetri:
+                    Tidak Memiliki Sumbu Simetri:{' '}
                   </span>
                   Fungsi eksponensial tidak memiliki titik balik atau sumbu
                   simetri seperti fungsi kuadrat. Namun, grafik fungsi
@@ -98,5 +98,3 @@ const Eksponensial = () => {
     </div>
   )
 }
-
-export default Eksponensial

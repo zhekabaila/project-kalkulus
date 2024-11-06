@@ -1,65 +1,70 @@
 import Image from 'next/image'
 
-const Linear = () => {
+export const Logaritma = () => {
   return (
     <div
       className="col-span-2 space-y-9 bg-white/20 backdrop-blur-md rounded-xl border-2 border-white/30 p-16"
       id="fungsi-linear"
     >
-      <div className="flex flex-row gap-x-20">
+      <div className="flex flex-row-reverse gap-x-20">
         <div className="basis-1/2 space-y-6 text-lg font-base text-justify">
           <h3 className="text-3xl font-semibold">
-            Fungsi <span className="text-blue-500">Linear</span>
+            Fungsi <span className="text-blue-500">Logaritma</span>
           </h3>
           <div className="space-y-1">
             <h4 className="text-xl font-semibold">
-              Apa itu fungsi <span className="text-blue-500">linear?</span>
+              Apa itu fungsi <span className="text-blue-500">Logaritma?</span>
             </h4>
-            <p className="">
-              fungsi yang membentuk garis lurus ketika digambarkan dalam bidang
-              koordinat.
+            <p>
+              adalah fungsi invers dari fungsi eksponensial, yang digunakan
+              untuk menentukan eksponen yang diperlukan untuk mendapatkan suatu
+              bilangan tertentu pada basis tertentu.
             </p>
           </div>
           <div className="space-y-4">
-            <h4 className="text-xl font-semibold">Rumus</h4>
+            <h4 className="text-xl font-semibold">Bentuk umum</h4>
             <div>
               <p className="inline text-xl font-medium bg-gray-200 p-3 rounded-md">
-                f(x) = ax + b
+                f(x) = log<sub>b</sub>(x)
               </p>
               <h5 className="mt-5">Keterangan:</h5>
               <ul className="list-outside list-disc">
                 <li>
-                  <span className="font-bold">a</span> adalah gradien atau
-                  kemiringan garis, yang menunjukkan seberapa curam garis
-                  tersebut.
+                  <span className="font-bold">b</span> adalah basis logaritma
+                  (dengan b{'>'}0 dan b≠1),
                 </li>
                 <li>
-                  <span className="font-bold">x</span> adalah variabel.
+                  <span className="font-bold">x</span> adalah variabel input
+                  (dengan x{'>'}0), dan
                 </li>
                 <li>
-                  <span className="font-bold">b</span> adalah intersep atau
-                  titik potong garis dengan sumbu-y, yaitu nilai f(x) saat x=0.
+                  <span className="font-bold">f(x)</span> adalah nilai logaritma
+                  dari x dalam basis b, yang menyatakan eksponen yang membuat b
+                  berpangkat f(x) menjadi x.
                 </li>
               </ul>
             </div>
           </div>
           <div className="space-y-1">
             <h4 className="text-xl font-semibold">
-              Karakteristik Fungsi Linear.
+              Karakteristik Fungsi Logaritma.
             </h4>
             <div>
               <ul className="list-outside list-disc">
                 <li>
-                  Grafik berupa garis lurus: Fungsi ini menghasilkan garis lurus
-                  pada grafik kartesius.
+                  <span className="font-bold">Grafik Melengkung:</span> Grafik
+                  fungsi logaritma memiliki bentuk melengkung yang lambat
+                  meningkat. Fungsi ini mendekati sumbu-y tetapi tidak pernah
+                  menyentuhnya.
                 </li>
                 <li>
-                  Gradien (Kemiringan): Menentukan apakah garis akan naik (jika
-                  a{'>'}0), turun (jika a{'<'}0), atau mendatar (jika a=0).
+                  <span className="font-bold">Pertumbuhan Lambat:</span>{' '}
+                  Dibandingkan fungsi eksponensial, fungsi logaritma tumbuh
+                  lebih lambat saat x bertambah besar.
                 </li>
                 <li>
-                  Hubungan proporsionalitas: Fungsi linear menunjukkan hubungan
-                  yang proporsional atau konstan antara x dan f(x).
+                  <span className="font-bold">Domain Terbatas: </span>
+                  Fungsi logaritma hanya didefinisikan untuk nilai x{'>'}0.
                 </li>
               </ul>
             </div>
@@ -79,5 +84,3 @@ const Linear = () => {
     </div>
   )
 }
-
-export default Linear
