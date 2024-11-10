@@ -3,7 +3,7 @@ export const members = [
     name: 'Zheka Baila Arkan',
     npm: '247006111152',
     instagram: 'zhekabailaa',
-    photo: '/images/members/fawwaz.jpeg',
+    photo: '/images/members/zheka.jpeg',
   },
   {
     name: 'Muhammad Fawwazul Haw',
@@ -15,12 +15,12 @@ export const members = [
     name: 'Alif Akhdan ',
     npm: '247006111152',
     instagram: 'zhekabailaa',
-    photo: '/images/members/fawwaz.jpeg',
+    photo: '/images/members/alif.jpeg',
   },
   {
     name: 'Rakha Aji Mulya',
     npm: '247006111152',
     instagram: 'zhekabailaa',
-    photo: '/images/members/fawwaz.jpeg',
+    photo: '/images/members/rakha.jpeg',
   },
 ]
