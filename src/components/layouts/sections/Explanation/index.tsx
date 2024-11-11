@@ -37,7 +37,7 @@ const Explanation = () => {
             title="Definisi Fungsi"
             highlightTitle="Trigonometri Dasar"
           >
-            <p className="text-xs lg:text-lg font-medium text-justify dark:text-sun">
+            <p className="text-sm lg:text-lg font-medium text-justify text-[#3d4048] dark:text-sun">
               Fungsi trigonometri adalah fungsi yang berhubungan dengan sudut
               dan segitiga, terutama segitiga siku-siku.
             </p>
@@ -47,7 +47,7 @@ const Explanation = () => {
             title="Fungsi trigonometri dasar meliputi :"
             highlightTitle=""
           >
-            <div className="text-xs lg:text-lg font-medium dark:text-sun">
+            <div className="text-sm lg:text-lg dark:text-sun">
               <ul className="list-outside list-disc space-y-2">
                 <li>
                   <span className="font-bold text-primary dark:text-jeruk">
@@ -94,10 +94,15 @@ const Explanation = () => {
             highlightTitle=""
             span
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="text-sm lg:text-lg grid grid-cols-1 lg:grid-cols-2 gap-10">
               <div>
-                <h4>Identitas Pythagoras:</h4>
-                <ul>
+                <h4 className="font-semibold">
+                  Identitas{' '}
+                  <span className="text-primary dark:text-jeruk">
+                    Pythagoras:
+                  </span>
+                </h4>
+                <ul className="mt-4 space-y-2">
                   <li>
                     sin<sup>2</sup>&theta; + cos<sup>2</sup>&theta; = 1
                   </li>
@@ -110,23 +115,38 @@ const Explanation = () => {
                 </ul>
               </div>
               <div>
-                <h4>Identitas Penjumlahan dan Pengurangan:</h4>
-                <ul>
+                <h4 className="font-semibold">
+                  Identitas{' '}
+                  <span className="text-primary dark:text-jeruk">
+                    Penjumlahan
+                  </span>{' '}
+                  dan{' '}
+                  <span className="text-primary dark:text-jeruk">
+                    Pengurangan:
+                  </span>
+                </h4>
+                <ul className="text-[#3d4048] mt-4 space-y-2">
                   <li>
-                    <h5>Sinus:</h5>
+                    <h5 className="font-medium text-primary dark:text-jeruk">
+                      Sinus:
+                    </h5>
                     <p>sin(a &plusmn; b) = sin a cos b &plusmn; cos a sin b</p>
                   </li>
                   <li>
-                    <h5>Cosinus:</h5>
+                    <h5 className="font-medium text-primary dark:text-jeruk">
+                      Cosinus:
+                    </h5>
                     <p>cos(a &plusmn; b) = cos a cos b &#8723; sin a sin b</p>
                   </li>
                   <li>
-                    <h5>Tangen:</h5>
+                    <h5 className="font-medium text-primary dark:text-jeruk">
+                      Tangen:
+                    </h5>
                     <div className="flex items-center gap-2">
                       <div>tan(a &plusmn; b) =</div>
                       <div className="flex flex-col">
                         <span>tan a &#8723; tan b</span>
-                        <span className="border-t border-t-black">
+                        <span className="border-t border-t-black dark:border-t-sun">
                           1 &#8723; tan a tan b
                         </span>
                       </div>
@@ -142,33 +162,41 @@ const Explanation = () => {
             highlightTitle="Kalkulus:"
             span
           >
-            <p className="text-xs lg:text-lg font-medium text-justify dark:text-sun">
+            <p className="text-sm lg:text-lg font-medium text-justify">
               Dalam Kalkulus, fungsi trigonometri sering kali diintegrasikan dan
               diturunkan.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 text-sm lg:text-lg">
               <div>
-                <h5>Turunan:</h5>
-                <ul>
+                <h5 className="font-medium text-primary dark:text-jeruk">
+                  Turunan:
+                </h5>
+                <ul className="mt-4 space-y-4">
                   <li className="flex items-center gap-2">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col justify-center items-center">
                       <span>d</span>
-                      <span className="border-t border-t-black">dx</span>
+                      <span className="border-t border-t-black dark:border-t-sun">
+                        dx
+                      </span>
                     </div>
                     <div>sin x = cos x</div>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col justify-center items-center">
                       <span>d</span>
-                      <span className="border-t border-t-black">dx</span>
+                      <span className="border-t border-t-black dark:border-t-sun">
+                        dx
+                      </span>
                     </div>
                     <div>cos x = -sin x</div>
                   </li>
                   <li className="flex items-center gap-2">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col justify-center items-center">
                       <span>d</span>
-                      <span className="border-t border-t-black">dx</span>
+                      <span className="border-t border-t-black dark:border-t-sun">
+                        dx
+                      </span>
                     </div>
                     <div>
                       tan x = sec<sup>2</sup> x
@@ -177,8 +205,10 @@ const Explanation = () => {
                 </ul>
               </div>
               <div>
-                <h5>Integral:</h5>
-                <ul>
+                <h5 className="font-medium text-primary dark:text-jeruk">
+                  Integral:
+                </h5>
+                <ul className="mt-4 space-y-4">
                   <li>
                     <p>&int; sin x dx = - cos x + C</p>
                   </li>
