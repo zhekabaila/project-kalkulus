@@ -42,7 +42,7 @@ const Calculator = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk">
+    <div className="flex flex-col items-center justify-center px-4 py-7 lg:px-36 lg:py-7 border-t-4 border-t-blue-500 dark:border-t-jeruk">
       <h1 className="text-2xl font-bold mb-4">Kalkulator</h1>
 
       <div className="flex items-center gap-x-2">

@@ -18,9 +18,7 @@ const TeamCard = ({
   instagram,
 }: TeamCardProps) => {
   return (
-    <div
-      className="flex flex-col bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16"
-    >
+    <div className="flex flex-col bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
       <div className="relative flex gap-x-5">
         <div className="rounded-full object-center object-cover basis-1/4">
           <Image
@@ -40,7 +38,7 @@ const TeamCard = ({
           target="_blank"
           className="absolute top-0 right-0 p-2 bg-black rounded-full aspect-square"
         >
-          <FaInstagram color="#B9FF66" size={16} />
+          <FaInstagram className="text-sun" size={16} />
         </Link>
       </div>
       <div className="border-t border-t-black dark:border-t-sun pt-7 mt-7">

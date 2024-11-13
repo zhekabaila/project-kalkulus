@@ -134,6 +134,20 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="flex items-center gap-x-2 bg-primary dark:bg-jeruk p-3 rounded-lg"
+            >
+              <p className="text-sun">Ganti Tema</p>
+              {!darkMode ? (
+                <IoIosMoon size={28} color="#F5F5F5" />
+              ) : (
+                <IoIosSunny size={28} color="#F5F5F5" />
+              )}
+            </button>
+          </li>
         </ul>
       </div>
     </>

@@ -11,7 +11,8 @@ const About = () => {
           Tentang
         </h2> */}
         {/* mt-16 lg:mt-24 */}
-        <div className="grid grid-cols-2 gap-10 lg:gap-20">
+        <div className="relative grid grid-cols-2 gap-10 lg:gap-20">
+          <div className="hidden lg:block absolute left-1/2 top-0 w-1 h-full bg-primary dark:bg-jeruk"></div>
           <AboutCard
             title="Latar"
             highlightTitle="Belakang"

@@ -8,6 +8,7 @@ import Hero from '@/components/layouts/sections/Hero'
 import { Poppins } from 'next/font/google'
 import type { Metadata } from 'next'
 import './globals.css'
+import Technologies from '@/components/layouts/sections/Technologies'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function Home() {
           <About />
           <Explanation />
           <Calculator />
+          <Technologies />
           <Members />
         </main>
         <Footer />
