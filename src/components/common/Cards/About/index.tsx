@@ -26,7 +26,7 @@ const AboutCard = ({
         {title}{' '}
         <span className="text-blue-500 dark:text-jeruk">{highlightTitle}</span>
       </h3>
-      <p className="text-xs lg:text-lg font-medium text-justify dark:text-sun">
+      <p className="text-sm lg:text-lg font-medium dark:text-sun">
         {description}
       </p>
     </div>

@@ -12,7 +12,7 @@ const Explanation = () => {
   return (
     <section
       className="relative flex items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
-      id="penjelasan"
+      id="pembahasan"
     >
       <div className="absolute inset-0 size-full -z-40">
         {darkMode ? (
@@ -240,132 +240,137 @@ const Explanation = () => {
             highlightTitle="Trigonometri:"
             span
           >
-            <p className="text-xs lg:text-lg font-medium text-justify dark:text-sun">
+            <p className="text-sm lg:text-lg font-medium text-justify dark:text-sun">
               Fungsi trigonometri adalah suatu fungsi yang grafiknya berulang
               secara terus menerus dalam periode tertentu.
             </p>
+          </ExplanationCard>
 
-            <div>
-              <div>
-                <h4>Unsur Unsur Grafik Trigonometri</h4>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 text-xs lg:text-lg font-medium dark:text-sun">
-                  <ul>
-                    <li>
-                      <h5>Amplitudo</h5>
-                      <ul className="list-disc list-outside">
-                        <li>
-                          <b>Amplitudo</b> adalah nilai maksimum dari grafik
-                          fungsi trigonometri. Untuk fungsi sinus dan kosinus
-                          standar, amplitudo adalah 1. Amplitudo menunjukkan{' '}
-                          {'"'}
-                          tinggi
-                          {'"'}
-                          {'"'}
-                          atau {'"'}ketinggian{'"'} grafik dari titik
-                          keseimbangannya (sumbu x).
-                        </li>
-                        <li>
-                          <b>Contoh:</b> Pada grafik y = 2 sin ⁡x, amplitudo
-                          adalah 2, yang berarti grafik akan mencapai nilai
-                          maksimum 2 dan minimum -2.
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h5>Periode</h5>
-                      <ul className="list-disc list-outside">
-                        <li>
-                          <b>Periode</b> adalah panjang satu siklus penuh dari
-                          grafik, yaitu jarak pada sumbu x yang diperlukan untuk
-                          pola grafik berulang kembali.
-                        </li>
-                        <li>
-                          <b>Fungsi sinus dan kosinus</b> memiliki periode
-                          standar 2π, artinya grafik akan mengulang pola setiap
-                          2π satuan pada sumbu x.
-                        </li>
-                        <li>
-                          <b>Fungsi tangen</b> memiliki periode standar π\piπ,
-                          karena grafik tangen mengulang pola setiap π\piπ
-                          satuan pada sumbu x.
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h5>Frekuensi</h5>
-                      <ul className="list-disc list-outside">
-                        <li>
-                          <b>Frekuensi</b> adalah jumlah siklus yang terjadi
-                          dalam satu satuan panjang pada sumbu x. Frekuensi
-                          berbanding terbalik dengan periode.
-                        </li>
-                        <li>
-                          <div className="flex items-center gap-x-3">
-                            Jika f(x) = sin⁡(bx), maka frekuensi adalah b, dan
-                            periode menjadi{' '}
-                            <span className="flex flex-col items-center justify-center">
-                              <span>2&pi;</span>
-                              <span className="border-t border-t-black">
-                                {' '}
-                                b{' '}
-                              </span>
-                            </span>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <h5>Fase (Perpindahan Fase)</h5>
-                      <ul className="list-disc list-outside">
-                        <li>
-                          <b>Fase</b> menunjukkan seberapa jauh grafik bergeser
-                          ke kanan atau ke kiri dari posisi asalnya.
-                        </li>
-                        <li>
-                          Pada fungsi seperti <b>y = sin⁡(x − c)</b>, <b>c</b>{' '}
-                          adalah perpindahan fase, yang menyebabkan grafik
-                          bergeser <b>c</b> satuan ke kanan jika <b>c</b>{' '}
-                          positif, atau <b>c</b> satuan ke kiri jika <b>c</b>{' '}
-                          negatif.
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h5>Sumbu Tengah (Garis Keseimbangan)</h5>
-                      <ul className="list-disc list-outside">
-                        <li>
-                          <b>Sumbu tengah</b> adalah garis horizontal yang
-                          membagi grafik menjadi dua bagian simetris secara
-                          vertikal. Pada grafik sinus dan kosinus, sumbu tengah
-                          biasanya berada di y=0, tetapi bisa bergeser ke atas
-                          atau ke bawah.
-                        </li>
-                        <li>
-                          Jika fungsi ditulis seperti <b>y = A sin⁡(x) + D</b>,
-                          maka <b>D</b> adalah pergeseran vertikal yang
-                          menentukan posisi sumbu tengah.
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <h5>
-                        Asimtot (untuk Tangen, Kotangen, Sekan, dan Kosekan)
-                      </h5>
-                      <ul className="list-disc list-outside">
-                        <li>
-                          Fungsi seperti <b>tangen</b>, <b>kotangen</b>,{' '}
-                          <b>sekan</b>, dan <b>kosekan</b> memiliki asimtot
-                          vertikal, yaitu garis yang grafiknya mendekati tetapi
-                          tidak pernah disentuh.
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <ExplanationCard
+            title="Unsur Unsur Grafik"
+            highlightTitle="Trigonometri:"
+          >
+            <ul className="space-y-7 text-sm lg:text-lg">
+              <li>
+                <h5 className="font-bold text-primary dark:text-jeruk">
+                  Amplitudo
+                </h5>
+                <ul className="list-disc list-outside space-y-2">
+                  <li>
+                    <b>Amplitudo</b> adalah nilai maksimum dari grafik fungsi
+                    trigonometri. Untuk fungsi sinus dan kosinus standar,
+                    amplitudo adalah 1. Amplitudo menunjukkan {'"'}
+                    tinggi
+                    {'"'}
+                    {'"'}
+                    atau {'"'}ketinggian{'"'} grafik dari titik keseimbangannya
+                    (sumbu x).
+                  </li>
+                  <li>
+                    <b>Contoh:</b> Pada grafik y = 2 sin ⁡x, amplitudo adalah 2,
+                    yang berarti grafik akan mencapai nilai maksimum 2 dan
+                    minimum -2.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5 className="font-bold text-primary dark:text-jeruk">
+                  Periode
+                </h5>
+                <ul className="list-disc list-outside space-y-2">
+                  <li>
+                    <b>Periode</b> adalah panjang satu siklus penuh dari grafik,
+                    yaitu jarak pada sumbu x yang diperlukan untuk pola grafik
+                    berulang kembali.
+                  </li>
+                  <li>
+                    <b>Fungsi sinus dan kosinus</b> memiliki periode standar 2π,
+                    artinya grafik akan mengulang pola setiap 2π satuan pada
+                    sumbu x.
+                  </li>
+                  <li>
+                    <b>Fungsi tangen</b> memiliki periode standar π\piπ, karena
+                    grafik tangen mengulang pola setiap π\piπ satuan pada sumbu
+                    x.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5 className="font-bold text-primary dark:text-jeruk">
+                  Frekuensi
+                </h5>
+                <ul className="list-disc list-outside space-y-2">
+                  <li>
+                    <b>Frekuensi</b> adalah jumlah siklus yang terjadi dalam
+                    satu satuan panjang pada sumbu x. Frekuensi berbanding
+                    terbalik dengan periode.
+                  </li>
+                  <li>
+                    <div className="flex items-center gap-x-3">
+                      Jika f(x) = sin⁡(bx), maka frekuensi adalah b, dan periode
+                      menjadi{' '}
+                      <span className="flex flex-col items-center justify-center">
+                        <span>2&pi;</span>
+                        <span className="border-t border-t-black dark:border-t-sun">
+                          {' '}
+                          b{' '}
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </ExplanationCard>
+
+          <ExplanationCard title="Fase" highlightTitle="(Perpindahan Fase)">
+            <ul className="space-y-7 text-sm lg:text-lg">
+              <li>
+                <h5 className="font-bold text-primary dark:text-jeruk">Fase</h5>
+                <ul className="list-disc list-outside space-y-2">
+                  <li>
+                    <b>Fase</b> menunjukkan seberapa jauh grafik bergeser ke
+                    kanan atau ke kiri dari posisi asalnya.
+                  </li>
+                  <li>
+                    Pada fungsi seperti <b>y = sin⁡(x − c)</b>, <b>c</b> adalah
+                    perpindahan fase, yang menyebabkan grafik bergeser <b>c</b>{' '}
+                    satuan ke kanan jika <b>c</b> positif, atau <b>c</b> satuan
+                    ke kiri jika <b>c</b> negatif.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5 className="font-bold text-primary dark:text-jeruk">
+                  Sumbu Tengah (Garis Keseimbangan)
+                </h5>
+                <ul className="list-disc list-outside space-y-2">
+                  <li>
+                    <b>Sumbu tengah</b> adalah garis horizontal yang membagi
+                    grafik menjadi dua bagian simetris secara vertikal. Pada
+                    grafik sinus dan kosinus, sumbu tengah biasanya berada di
+                    y=0, tetapi bisa bergeser ke atas atau ke bawah.
+                  </li>
+                  <li>
+                    Jika fungsi ditulis seperti <b>y = A sin⁡(x) + D</b>, maka{' '}
+                    <b>D</b> adalah pergeseran vertikal yang menentukan posisi
+                    sumbu tengah.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5 className="font-bold text-primary dark:text-jeruk">
+                  Asimtot (untuk Tangen, Kotangen, Sekan, dan Kosekan)
+                </h5>
+                <ul className="list-disc list-outside space-y-2">
+                  <li>
+                    Fungsi seperti <b>tangen</b>, <b>kotangen</b>, <b>sekan</b>,
+                    dan <b>kosekan</b> memiliki asimtot vertikal, yaitu garis
+                    yang grafiknya mendekati tetapi tidak pernah disentuh.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </ExplanationCard>
 
           <ExplanationCard title="Grafik" highlightTitle="Trigonometri" span>

@@ -4,8 +4,8 @@ export const menus = [
     link: '#tentang',
   },
   {
-    name: 'Penjelasan',
-    link: '#penjelasan',
+    name: 'Pembahasan',
+    link: '#pembahasan',
   },
   {
     name: 'Rumus',

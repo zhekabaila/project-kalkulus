@@ -1,6 +1,6 @@
 import Explanation from '@/components/layouts/sections/Explanation'
 import Calculator from '@/components/layouts/sections/Calculator'
-import Members from '@/components/layouts/sections/Members'
+import Members from '@/components/layouts/sections/Teams'
 import Navbar from '@/components/layouts/sections/Navbar'
 import Footer from '@/components/layouts/sections/Footer'
 import About from '@/components/layouts/sections/About'

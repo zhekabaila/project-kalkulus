@@ -38,7 +38,7 @@ const Hero = () => {
             Selamat Datang Di <br />
             <span className="text-blue-500 dark:text-jeruk">Website</span> Kami!
           </h1>
-          <p className="text-xs lg:text-base text-center mt-4 lg:mt-8 dark:text-sun lg:max-w-5xl mx-auto">
+          <p className="text-sm lg:text-base text-center mt-4 lg:mt-8 dark:text-sun lg:max-w-5xl mx-auto">
             Panduan lengkap mengenai fungsi trigonometri yang mencakup
             penjelasan tentang fungsi dasar seperti sinus, cosinus, dan tangen.
             Situs ini menyediakan rumus-rumus penting, grafik fungsi, contoh

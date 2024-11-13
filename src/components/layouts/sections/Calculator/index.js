@@ -42,22 +42,24 @@ const Calculator = () => {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 border-t-4 border-t-blue-500">
-      <h1 className="text-2xl font-bold mb-4">Calculator</h1>
+    <div className="flex flex-col items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk">
+      <h1 className="text-2xl font-bold mb-4">Kalkulator</h1>
 
-      <input
-        type="text"
-        value={inputFunction}
-        onChange={(e) => setInputFunction(e.target.value)}
-        placeholder="Enter function, e.g., sin(x)"
-        className="border border-gray-300 p-2 rounded mb-2"
-      />
-      <button
-        onClick={updateGraph}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
-        Plot
-      </button>
+      <div className="flex items-center gap-x-2">
+        <input
+          type="text"
+          value={inputFunction}
+          onChange={(e) => setInputFunction(e.target.value)}
+          placeholder="Enter function, e.g., sin(x)"
+          className="border border-gray-300 p-2 rounded text-black"
+        />
+        <button
+          onClick={updateGraph}
+          className="bg-blue-500 text-white px-4 py-2 rounded h-full"
+        >
+          Hitung
+        </button>
+      </div>
 
       <div id="ggb-element" ref={ggbElementRef} className="mt-6"></div>
     </div>
