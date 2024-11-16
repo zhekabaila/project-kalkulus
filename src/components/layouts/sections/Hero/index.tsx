@@ -34,9 +34,12 @@ const Hero = () => {
           )}
         </div>
         <div className="flex flex-col items-center justify-center bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-2xl size-full border-2 border-gray-600/30 p-4 lg:p-0">
-          <h1 className="text-center font-medium text-3xl lg:text-7xl leading-tight dark:text-sun">
-            Selamat Datang Di <br />
-            <span className="text-blue-500 dark:text-jeruk">Website</span> Kami!
+          <h1 className="flex flex-col justify-center items-center gap-6 text-center font-medium text-3xl sm:text-6xl leading-tight dark:text-sun">
+            <p>Selamat Datang Di</p>
+            <p>
+              <span className="text-blue-500 dark:text-jeruk">Website</span>{' '}
+              Kami!
+            </p>
           </h1>
           <p className="text-sm lg:text-base text-center mt-4 lg:mt-8 dark:text-sun lg:max-w-5xl mx-auto">
             Panduan lengkap mengenai fungsi trigonometri yang mencakup

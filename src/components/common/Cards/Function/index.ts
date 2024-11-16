@@ -1,1 +1,0 @@
-export { Trigonometri } from './Trigonometri'
