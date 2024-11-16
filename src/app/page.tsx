@@ -1,14 +1,25 @@
-import Explanation from '@/components/layouts/sections/Explanation'
-import Calculator from '@/components/layouts/sections/Calculator'
-import Members from '@/components/layouts/sections/Teams'
-import Navbar from '@/components/layouts/sections/Navbar'
-import Footer from '@/components/layouts/sections/Footer'
-import About from '@/components/layouts/sections/About'
-import Hero from '@/components/layouts/sections/Hero'
 import { Poppins } from 'next/font/google'
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import './globals.css'
-import Technologies from '@/components/layouts/sections/Technologies'
+
+const Hero = dynamic(() => import('@/components/layouts/sections/Hero'))
+const About = dynamic(() => import('@/components/layouts/sections/About'))
+const Footer = dynamic(() => import('@/components/layouts/sections/Footer'))
+const Navbar = dynamic(() => import('@/components/layouts/sections/Navbar'))
+const Teams = dynamic(() => import('@/components/layouts/sections/Teams'))
+const Calculator = dynamic(
+  () => import('@/components/layouts/sections/Calculator')
+)
+const Explanation = dynamic(
+  () => import('@/components/layouts/sections/Explanation')
+)
+const Technologies = dynamic(
+  () => import('@/components/layouts/sections/Technologies')
+)
+const Questions = dynamic(
+  () => import('@/components/layouts/sections/Questions')
+)
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -33,8 +44,9 @@ export default function Home() {
           <About />
           <Explanation />
           <Calculator />
+          <Questions />
           <Technologies />
-          <Members />
+          <Teams />
         </main>
         <Footer />
       </body>

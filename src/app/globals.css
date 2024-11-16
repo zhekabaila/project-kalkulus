@@ -14,6 +14,7 @@ h5,
 p,
 a,
 span,
-div {
+div,
+label {
   @apply text-[#3d4048] dark:text-sun;
 }
