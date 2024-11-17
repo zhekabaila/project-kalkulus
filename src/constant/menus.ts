@@ -8,16 +8,16 @@ export const menus = [
     link: '#pembahasan',
   },
   {
-    name: 'Rumus',
-    link: '#rumus',
-  },
-  {
-    name: 'Contoh',
-    link: '#contoh',
-  },
-  {
     name: 'Kalkulator',
     link: '#kalkulator',
+  },
+  {
+    name: 'Soal',
+    link: '#soal',
+  },
+  {
+    name: 'Teknologi',
+    link: '#teknologi',
   },
   {
     name: 'Anggota',

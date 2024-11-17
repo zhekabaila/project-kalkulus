@@ -5,7 +5,7 @@ import { IoIosMoon, IoIosSunny } from 'react-icons/io'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { menus } from '@/constant/manus'
+import { menus } from '@/constant/menus'
 import { useTheme } from '@/contexts/themeContext'
 import { HiOutlineMenuAlt4, HiOutlineX } from 'react-icons/hi'
 
@@ -112,7 +112,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className={`lg:hidden fixed top-[106px] transition-all duration-700 ease-in-out z-50 w-full ${
+        className={`lg:hidden fixed top-[106px] transition-all duration-700 ease-in-out z-[100] w-full ${
           openNavbar ? 'right-0' : '-right-full'
         }`}
       >

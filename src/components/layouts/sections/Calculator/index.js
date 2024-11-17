@@ -176,23 +176,44 @@ const Calculator = () => {
         >
           Hitung
         </button>
-        <div className="">
-          <h4 className='text-lg font-semibold'>Penjelasan:</h4>
+        <div className="mt-12">
+          <h4 className="text-base lg:text-lg font-semibold tracking-widest">
+            f(x) = {fungsi.amplitudo} {fungsi.fungsi}({fungsi.frekuensi}x
+            {fungsi.fase ? `${fungsi.fase}` : ''}){' '}
+            {fungsi.pergeseranVertikal ? `${fungsi.pergeseranVertikal}` : ''}
+          </h4>
+          <h4 className="text-base lg:text-lg font-semibold">Penjelasan:</h4>
           <div className="grid grid-cols-6 gap-2 mt-5">
-            <p className="font-medium">{fungsi.amplitudo || 'A'}</p>
-            <p className="col-span-5">: Adalah Amplitudo</p>
-            
-            <p className="font-medium">{fungsi.fungsi || 'sin'}</p>
-            <p className="col-span-5">: Adalah Fungsi</p>
+            <p className="font-medium text-sm lg:text-base">
+              {fungsi.amplitudo || 'A'}
+            </p>
+            <p className="col-span-5 text-sm lg:text-base">
+              : Adalah Amplitudo
+            </p>
 
-            <p className="font-medium">{fungsi.frekuensi || 'k'}</p>
-            <p className="col-span-5">: Adalah Frekuensi</p>
+            <p className="font-medium text-sm lg:text-base">
+              {fungsi.fungsi || 'sin'}
+            </p>
+            <p className="col-span-5 text-sm lg:text-base">: Adalah Fungsi</p>
 
-            <p className="font-medium">{fungsi.fase || 'b'}</p>
-            <p className="col-span-5">: Adalah Fase</p>
+            <p className="font-medium text-sm lg:text-base">
+              {fungsi.frekuensi || 'k'}
+            </p>
+            <p className="col-span-5 text-sm lg:text-base">
+              : Adalah Frekuensi
+            </p>
 
-            <p className="font-medium">{fungsi.pergeseranVertikal || 'c'}</p>
-            <p className="col-span-5">: Adalah Pergeseran Vertikal</p>
+            <p className="font-medium text-sm lg:text-base">
+              {fungsi.fase || 'b'}
+            </p>
+            <p className="col-span-5 text-sm lg:text-base">: Adalah Fase</p>
+
+            <p className="font-medium text-sm lg:text-base">
+              {fungsi.pergeseranVertikal || 'c'}
+            </p>
+            <p className="col-span-5 text-sm lg:text-base">
+              : Adalah Pergeseran Vertikal
+            </p>
           </div>
         </div>
       </div>

@@ -11,35 +11,21 @@ const Explanation = () => {
 
   return (
     <section
-      className="relative flex items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      className="relative flex items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(/images/${
+          darkMode ? 'abstract-line-dark.svg' : 'abstract-line.svg'
+        })`,
+      }}
       id="pembahasan"
     >
-      <div className="absolute inset-0 size-full -z-40">
-        {darkMode ? (
-          <Image
-            src="/images/abstract-line-dark.svg"
-            alt="dqw"
-            width={1000}
-            height={1000}
-            className="size-full"
-          />
-        ) : (
-          <Image
-            src="/images/abstract-line.svg"
-            alt="dqw"
-            width={1000}
-            height={1000}
-            className="size-full"
-          />
-        )}
-      </div>
       <div className="size-full">
         <div className="grid grid-cols-2 gap-10 lg:gap-20">
           <ExplanationCard
             title="Definisi Fungsi"
             highlightTitle="Trigonometri Dasar"
           >
-            <p className="text-sm lg:text-lg font-medium text-justify text-[#3d4048] dark:text-sun">
+            <p className="text-sm lg:text-lg font-medium text-[#3d4048] dark:text-sun">
               Fungsi trigonometri adalah fungsi yang berhubungan dengan sudut
               dan segitiga, terutama segitiga siku-siku.
             </p>
@@ -240,7 +226,7 @@ const Explanation = () => {
             highlightTitle="Trigonometri:"
             span
           >
-            <p className="text-sm lg:text-lg font-medium text-justify dark:text-sun">
+            <p className="text-sm lg:text-lg font-medium dark:text-sun">
               Fungsi trigonometri adalah suatu fungsi yang grafiknya berulang
               secara terus menerus dalam periode tertentu.
             </p>
@@ -386,7 +372,7 @@ const Explanation = () => {
                 <Link
                   href="https://www.ruangguru.com/blog/memahami-fungsi-trigonometri-sederhana"
                   target="_blank"
-                  className="mt-3 text-sm text-center text-shadow dark:text-sun hover:text-blue-200"
+                  className="mt-3 text-sm text-center text-shadow dark:text-sun hover:underline"
                 >
                   Memahami Fungsi Trigonometri Sederhana | Matematika Kelas 10
                 </Link>
@@ -402,7 +388,7 @@ const Explanation = () => {
                 <Link
                   href="https://www.ruangguru.com/blog/memahami-fungsi-trigonometri-sederhana"
                   target="_blank"
-                  className="mt-3 text-sm text-center text-shadow dark:text-sun hover:text-blue-200"
+                  className="mt-3 text-sm text-center text-shadow dark:text-sun hover:underline"
                 >
                   Memahami Fungsi Trigonometri Sederhana | Matematika Kelas 10
                 </Link>
@@ -418,7 +404,7 @@ const Explanation = () => {
                 <Link
                   href="https://www.ruangguru.com/blog/memahami-fungsi-trigonometri-sederhana"
                   target="_blank"
-                  className="mt-3 text-sm text-center text-shadow dark:text-sun hover:text-blue-200"
+                  className="mt-3 text-sm text-center text-shadow dark:text-sun hover:underline"
                 >
                   Memahami Fungsi Trigonometri Sederhana | Matematika Kelas 10
                 </Link>

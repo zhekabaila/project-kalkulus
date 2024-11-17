@@ -1,4 +1,5 @@
 'use client'
+import { useTheme } from '@/contexts/themeContext'
 import { useState } from 'react'
 import { AiOutlineSend } from 'react-icons/ai'
 
@@ -14,6 +15,7 @@ const Questions = () => {
     soal_3: '',
   })
   const [showCheckAnswer, setShowCheckAnswer] = useState<boolean>(false)
+  const { darkMode } = useTheme()
 
   const setValue = (questionNumber: 1 | 2 | 3, value: string) => {
     setAnswer((currentValue) => {
@@ -27,7 +29,10 @@ const Questions = () => {
   return (
     <section
       id="soal"
-      className="px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      className="bg-center bg-cover bg-no-repeat px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      style={{
+        backgroundImage: `url('/images/ttten${darkMode ? '-dark' : ''}.svg')`,
+      }}
     >
       <form
         onSubmit={(e) => {
@@ -36,7 +41,7 @@ const Questions = () => {
         }}
       >
         <ul className="space-y-9">
-          <li className="relative space-y-7 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
             <h4>Tentukan periode fungsi y = 2 + 5 cos 2x</h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <li className=" flex items-center gap-x-3">
@@ -49,6 +54,7 @@ const Questions = () => {
                     name="soal_1"
                     value="A"
                     onChange={(e) => setValue(1, e.target.value)}
+                    required
                     id="pilihan_A_1"
                     className="accent-primary dark:accent-white"
                   />
@@ -65,6 +71,7 @@ const Questions = () => {
                     name="soal_1"
                     value="B"
                     onChange={(e) => setValue(1, e.target.value)}
+                    required
                     id="pilihan_B_1"
                     className="accent-primary dark:accent-white"
                   />
@@ -81,6 +88,7 @@ const Questions = () => {
                     name="soal_1"
                     value="C"
                     onChange={(e) => setValue(1, e.target.value)}
+                    required
                     id="pilihan_C_1"
                     className="accent-primary dark:accent-white"
                   />
@@ -97,6 +105,7 @@ const Questions = () => {
                     name="soal_1"
                     value="D"
                     onChange={(e) => setValue(1, e.target.value)}
+                    required
                     id="pilihan_D_1"
                     className="accent-primary dark:accent-white"
                   />
@@ -106,7 +115,7 @@ const Questions = () => {
             </ul>
           </li>
 
-          <li className="relative space-y-7 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
             <h4>Nilai maksimum fungsi y = -8 cos (x - 10)</h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <li className=" flex items-center gap-x-3">
@@ -119,6 +128,7 @@ const Questions = () => {
                     name="soal_2"
                     value="A"
                     onChange={(e) => setValue(2, e.target.value)}
+                    required
                     id="pilihan_A_2"
                     className="accent-primary dark:accent-white"
                   />
@@ -135,6 +145,7 @@ const Questions = () => {
                     name="soal_2"
                     value="B"
                     onChange={(e) => setValue(2, e.target.value)}
+                    required
                     id="pilihan_B_2"
                     className="accent-primary dark:accent-white"
                   />
@@ -151,6 +162,7 @@ const Questions = () => {
                     name="soal_2"
                     value="C"
                     onChange={(e) => setValue(2, e.target.value)}
+                    required
                     id="pilihan_C_2"
                     className="accent-primary dark:accent-white"
                   />
@@ -167,6 +179,7 @@ const Questions = () => {
                     name="soal_2"
                     value="D"
                     onChange={(e) => setValue(2, e.target.value)}
+                    required
                     id="pilihan_D_2"
                     className="accent-primary dark:accent-white"
                   />
@@ -176,7 +189,7 @@ const Questions = () => {
             </ul>
           </li>
 
-          <li className="relative space-y-7 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
             <h4>
               Pada interval 0&deg; &le; x &le; 120&deg;, titik maksimum dari y =
               2 sin (3x – 30) adalah…
@@ -192,6 +205,7 @@ const Questions = () => {
                     name="soal_3"
                     value="A"
                     onChange={(e) => setValue(3, e.target.value)}
+                    required
                     id="pilihan_A_3"
                     className="accent-primary dark:accent-white"
                   />
@@ -208,6 +222,7 @@ const Questions = () => {
                     name="soal_3"
                     value="B"
                     onChange={(e) => setValue(3, e.target.value)}
+                    required
                     id="pilihan_B_3"
                     className="accent-primary dark:accent-white"
                   />
@@ -224,6 +239,7 @@ const Questions = () => {
                     name="soal_3"
                     value="C"
                     onChange={(e) => setValue(3, e.target.value)}
+                    required
                     id="pilihan_C_3"
                     className="accent-primary dark:accent-white"
                   />
@@ -240,6 +256,7 @@ const Questions = () => {
                     name="soal_3"
                     value="D"
                     onChange={(e) => setValue(3, e.target.value)}
+                    required
                     id="pilihan_D_3"
                     className="accent-primary dark:accent-white"
                   />

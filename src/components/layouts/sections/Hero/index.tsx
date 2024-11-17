@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import { useTheme } from '@/contexts/themeContext'
-import Image from 'next/image'
 
 import Link from 'next/link'
 import { IoArrowDownCircleOutline } from 'react-icons/io5'
@@ -13,28 +12,16 @@ const Hero = () => {
       className="relative flex items-center justify-center h-screen px-4 pt-32 pb-20 lg:p-36"
       id="hero"
     >
-      <div className="relative size-full">
-        <div className="absolute inset-0 size-full">
-          {darkMode ? (
-            <Image
-              src="/images/wave-dark.svg"
-              width={1000}
-              height={1000}
-              alt="wave"
-              className="size-full"
-            />
-          ) : (
-            <Image
-              src="/images/wave.svg"
-              width={1000}
-              height={1000}
-              alt="wave"
-              className="size-full"
-            />
-          )}
-        </div>
-        <div className="flex flex-col items-center justify-center bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-2xl size-full border-2 border-gray-600/30 p-4 lg:p-0">
-          <h1 className="flex flex-col justify-center items-center gap-6 text-center font-medium text-3xl sm:text-6xl leading-tight dark:text-sun">
+      <div
+        className="relative size-full bg-cover bg-no-repeat bg-center"
+        style={{
+          backgroundImage: `url('/images/${
+            darkMode ? 'wave-dark.svg' : 'wave.svg'
+          }')`,
+        }}
+      >
+        <div className="flex flex-col items-center justify-center bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-2xl size-full border-2 border-gray-300/30 dark:border-gray-600/30 p-4 lg:p-0">
+          <h1 className="flex flex-col justify-center items-center gap-1 lg:gap-3 text-center font-medium text-3xl lg:text-[3.5vw] leading-tight dark:text-sun">
             <p>Selamat Datang Di</p>
             <p>
               <span className="text-blue-500 dark:text-jeruk">Website</span>{' '}

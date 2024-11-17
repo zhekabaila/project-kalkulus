@@ -3,7 +3,10 @@ import AboutCard from '@/components/common/Cards/About'
 const About = () => {
   return (
     <section
-      className="relative flex items-center justify-center px-4 py-20 lg:p-36 min-h-screen border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      className="relative bg-center bg-cover bg-no-repeat flex items-center justify-center px-4 py-20 lg:p-36 min-h-screen border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      style={{
+        backgroundImage: `url('/images/linear-gradient.svg')`,
+      }}
       id="tentang"
     >
       <div>
