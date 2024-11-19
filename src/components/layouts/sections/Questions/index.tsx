@@ -18,6 +18,7 @@ const Questions = () => {
   const { darkMode } = useTheme()
 
   const setValue = (questionNumber: 1 | 2 | 3, value: string) => {
+    setShowCheckAnswer(false)
     setAnswer((currentValue) => {
       return {
         ...currentValue,
@@ -42,12 +43,14 @@ const Questions = () => {
       >
         <ul className="space-y-9">
           <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
-            <h4>Tentukan periode fungsi y = 2 + 5 cos 2x</h4>
+            <h4 className="text-base lg:text-lg font-semibold">
+              1. Tentukan periode fungsi y = 2 + 5 cos 2x
+            </h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_A_1"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -64,7 +67,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_B_1"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -81,7 +84,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_C_1"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -98,7 +101,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_D_1"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -116,12 +119,14 @@ const Questions = () => {
           </li>
 
           <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
-            <h4>Nilai maksimum fungsi y = -8 cos (x - 10)</h4>
+            <h4 className="text-base lg:text-lg font-semibold">
+              2. Nilai maksimum fungsi y = -8 cos (x - 10)
+            </h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_A_2"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -138,7 +143,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_B_2"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -155,7 +160,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_C_2"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -172,7 +177,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_D_2"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -190,15 +195,15 @@ const Questions = () => {
           </li>
 
           <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
-            <h4>
-              Pada interval 0&deg; &le; x &le; 120&deg;, titik maksimum dari y =
-              2 sin (3x – 30) adalah…
+            <h4 className="text-base lg:text-lg font-semibold">
+              3. Pada interval 0&deg; &le; x &le; 120&deg;, titik maksimum dari
+              y = 2 sin (3x – 30) adalah…
             </h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_A_3"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -215,7 +220,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_B_3"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -232,7 +237,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_C_3"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -249,7 +254,7 @@ const Questions = () => {
               <li className=" flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_D_3"
-                  className="flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
+                  className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
                 >
                   <input
                     type="radio"
@@ -285,11 +290,11 @@ const Questions = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
               <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
                 <div className="space-y-5">
-                  <h4 className="text-primary dark:text-jeruk font-semibold">
+                  <h4 className="text-base lg:text-lg text-primary dark:text-jeruk font-semibold">
                     Soal No. 1
                   </h4>
 
-                  <div className="space-y-3">
+                  <div className="space-y-3 text-sm lg:text-base">
                     <p className="">
                       {correctAnswers.soal_1 === answer.soal_1
                         ? 'Jawaban anda benar, yaitu 180°'
@@ -324,10 +329,10 @@ const Questions = () => {
               </div>
               <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
                 <div className="space-y-5">
-                  <h4 className="text-primary dark:text-jeruk font-semibold">
+                  <h4 className="text-base lg:text-lg text-primary dark:text-jeruk font-semibold">
                     Soal No. 2
                   </h4>
-                  <div className="space-y-3">
+                  <div className="space-y-3 text-sm lg:text-base">
                     <p className="">
                       {correctAnswers.soal_2 === answer.soal_2
                         ? 'Jawaban anda benar, yaitu 8'
@@ -350,10 +355,10 @@ const Questions = () => {
               </div>
               <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
                 <div className="space-y-5">
-                  <h4 className="text-primary dark:text-jeruk font-semibold">
+                  <h4 className="text-base lg:text-lg text-primary dark:text-jeruk font-semibold">
                     Soal No. 3
                   </h4>
-                  <div className="space-y-3">
+                  <div className="space-y-3 text-sm lg:text-base">
                     <p className="">
                       {correctAnswers.soal_3 === answer.soal_3
                         ? 'Jawaban anda benar, yaitu (40°, 2)'

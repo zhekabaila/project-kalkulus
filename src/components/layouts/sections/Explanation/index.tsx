@@ -5,6 +5,7 @@ import { useTheme } from '@/contexts/themeContext'
 import TrignonemetryTable from '@/components/common/Table/Trigonometri'
 import ExplanationCard from '@/components/common/Cards/Explanation'
 import Link from 'next/link'
+import Pecahan from '@/components/common/Pecahan'
 
 const Explanation = () => {
   const { darkMode } = useTheme()
@@ -408,6 +409,104 @@ const Explanation = () => {
                 >
                   Memahami Fungsi Trigonometri Sederhana | Matematika Kelas 10
                 </Link>
+              </div>
+            </div>
+          </ExplanationCard>
+
+          <ExplanationCard
+            title="Penjelasan Melalui"
+            highlightTitle="Video"
+            span
+          >
+            <iframe
+              src="https://www.youtube.com/embed/H0ove6GBUiA?si=aMOsi9DFL-RU3RL9"
+              title="YouTube video player"
+              frameBorder={0}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full h-auto aspect-video"
+            ></iframe>
+          </ExplanationCard>
+
+          <ExplanationCard
+            title="Contoh Soal dan"
+            highlightTitle="Penyelesaiannya"
+            span
+          >
+            <div className="grid grid-cols-1 gap-10">
+              <div className="flex flex-col gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
+                <div className="lg:basis-1/2">
+                  <h4 className="text-base lg:text-2xl font-semibold mb-5">
+                    y = sin x
+                  </h4>
+                  <p>Penyelesaian:</p>
+                  <p>y = sin x</p>
+                  <div className="grid grid-cols-2 *:border *:border-primary">
+                    <p>x = 0</p>
+                    <p>sin 0 = 0</p>
+
+                    <p>x = 30</p>
+                    <div className="flex items-center">
+                      sin 30 = <Pecahan atas="1" bawah="2" />
+                    </div>
+
+                    <p>x = 45</p>
+                    <div className="flex items-center">
+                      sin 45 = <Pecahan atas="1" bawah="2" sesudah="&radic;2" />
+                    </div>
+
+                    <p>x = 60</p>
+                    <div className="flex items-center">
+                      sin 60 = <Pecahan atas="1" bawah="2" sesudah="&radic;3" />
+                    </div>
+
+                    <p>x = 90</p>
+                    <div className="flex items-center">sin 90 = 1</div>
+                  </div>
+                  <p></p>
+                </div>
+                <div className="lg:basis-1/2 w-full h-auto">
+                  <Image
+                    src="/images/geogebra-export(2).png"
+                    width={500}
+                    height={400}
+                    alt="Gambar Grafik dari fungsi y = sin x"
+                    loading="lazy"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col lg:items-center gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
+                <div className="lg:basis-1/2">
+                  <p>y = sin x</p>
+                  <p>Penyelesaian:</p>
+                  <p>y = sin x</p>
+                  <div className="grid grid-cols-2">
+                    <p>x = 0</p>
+                    <p>sin 0 = 0</p>
+
+                    <p>x = 30</p>
+                    <div className="flex items-center">
+                      sin 30 = <Pecahan atas="1" bawah="2" />
+                    </div>
+
+                    <p>x = 45</p>
+                    <div className="flex items-center">
+                      sin 45 = <Pecahan atas="1" bawah="2" sesudah="&radic;2" />
+                    </div>
+
+                    <p>x = 60</p>
+                    <div className="flex items-center">
+                      sin 60 = <Pecahan atas="1" bawah="2" sesudah="&radic;3" />
+                    </div>
+
+                    <p>x = 90</p>
+                    <div className="flex items-center">sin 90 = 1</div>
+                  </div>
+                  <p></p>
+                </div>
+                <div className="lg:basis-1/2"></div>
               </div>
             </div>
           </ExplanationCard>
