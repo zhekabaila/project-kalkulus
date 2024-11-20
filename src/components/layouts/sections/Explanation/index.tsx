@@ -435,78 +435,107 @@ const Explanation = () => {
             span
           >
             <div className="grid grid-cols-1 gap-10">
-              <div className="flex flex-col gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
-                <div className="lg:basis-1/2">
-                  <h4 className="text-base lg:text-2xl font-semibold mb-5">
-                    y = sin x
+              <div className="flex flex-col-reverse gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
+                <div className="lg:basis-1/2 text-base lg:text-lg">
+                  <h4 className="hidden lg:block text-base lg:text-2xl font-semibold mb-5">
+                    1. y = sin x
                   </h4>
                   <p>Penyelesaian:</p>
                   <p>y = sin x</p>
-                  <div className="grid grid-cols-2 *:border *:border-primary">
-                    <p>x = 0</p>
-                    <p>sin 0 = 0</p>
+                  <div className="grid grid-cols-4 items-center *:pb-1 *:pt-4 mt-5">
+                    <p className="col-start-1">x = 0</p>
+                    <p className="">sin 0 = 0</p>
 
-                    <p>x = 30</p>
-                    <div className="flex items-center">
-                      sin 30 = <Pecahan atas="1" bawah="2" />
+                    <p className="col-start-1">x = 30</p>
+                    <div className="flex items-center gap-x-2 col-span-2">
+                      sin 30 ={' '}
+                      <Pecahan
+                        atas="1"
+                        bawah="2"
+                        textColor="text-[#3d4048] dark:text-sun"
+                      />
                     </div>
 
-                    <p>x = 45</p>
-                    <div className="flex items-center">
-                      sin 45 = <Pecahan atas="1" bawah="2" sesudah="&radic;2" />
+                    <p className="col-start-1">x = 45</p>
+                    <div className="flex items-center gap-x-2 col-span-2 text-[#3d4048]">
+                      sin 45 ={' '}
+                      <Pecahan
+                        atas="1"
+                        bawah="2"
+                        sesudah="&radic;2"
+                        textColor="text-[#3d4048] dark:text-sun"
+                      />
                     </div>
 
-                    <p>x = 60</p>
-                    <div className="flex items-center">
-                      sin 60 = <Pecahan atas="1" bawah="2" sesudah="&radic;3" />
+                    <p className="col-start-1">x = 60</p>
+                    <div className="flex items-center gap-x-2 col-span-2 text-[#3d4048]">
+                      sin 60 ={' '}
+                      <Pecahan
+                        atas="1"
+                        bawah="2"
+                        sesudah="&radic;3"
+                        textColor="text-[#3d4048] dark:text-sun"
+                      />
                     </div>
 
-                    <p>x = 90</p>
-                    <div className="flex items-center">sin 90 = 1</div>
+                    <p className="col-start-1">x = 90</p>
+                    <div className="flex items-center gap-x-2 col-span-2 text-[#3d4048]">
+                      sin 90 = 1
+                    </div>
                   </div>
-                  <p></p>
                 </div>
                 <div className="lg:basis-1/2 w-full h-auto">
+                  <h4 className="block lg:hidden text-base lg:text-2xl font-semibold mb-5">
+                    1. y = sin x
+                  </h4>
                   <Image
-                    src="/images/geogebra-export(2).png"
+                    src="/images/grafik_sin_1.png"
                     width={500}
                     height={400}
                     alt="Gambar Grafik dari fungsi y = sin x"
                     loading="lazy"
-                    className="w-full h-auto"
+                    className="w-full h-auto rounded-xl aspect-video"
                   />
                 </div>
               </div>
-              <div className="flex flex-col lg:items-center gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
-                <div className="lg:basis-1/2">
-                  <p>y = sin x</p>
-                  <p>Penyelesaian:</p>
-                  <p>y = sin x</p>
-                  <div className="grid grid-cols-2">
-                    <p>x = 0</p>
-                    <p>sin 0 = 0</p>
-
-                    <p>x = 30</p>
-                    <div className="flex items-center">
-                      sin 30 = <Pecahan atas="1" bawah="2" />
+              <div className="flex flex-col-reverse gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
+                <div className="lg:basis-1/2 text-base lg:text-lg">
+                  <h4 className="hidden lg:block text-base lg:text-2xl font-semibold mb-5">
+                    2. y = 2 sin (x - 60)
+                  </h4>
+                  <p>Penyelesaian :</p>
+                  <p>y = 2 sin (x - 60)</p>
+                  <div className="grid grid-cols-4 *:pb-1 *:pt-4 mt-5">
+                    <p className="col-start-1">x = 60</p>
+                    <div className="grid grid-cols-1 col-span-2">
+                      <p>x = 2 sin (60 - 60)</p>
+                      <p>&nbsp; = 2.0</p>
+                      <p>&nbsp; = 0</p>
                     </div>
 
-                    <p>x = 45</p>
-                    <div className="flex items-center">
-                      sin 45 = <Pecahan atas="1" bawah="2" sesudah="&radic;2" />
+                    <p className="col-start-1">x = 150</p>
+                    <div className="grid grid-cols-1 col-span-2">
+                      <p>x = 2 sin (150 - 60)</p>
+                      <p>&nbsp; = 2 sin 90</p>
+                      <p>&nbsp; = 2 x 1</p>
+                      <p>&nbsp; = 2</p>
                     </div>
-
-                    <p>x = 60</p>
-                    <div className="flex items-center">
-                      sin 60 = <Pecahan atas="1" bawah="2" sesudah="&radic;3" />
-                    </div>
-
-                    <p>x = 90</p>
-                    <div className="flex items-center">sin 90 = 1</div>
                   </div>
                   <p></p>
                 </div>
-                <div className="lg:basis-1/2"></div>
+                <div className="lg:basis-1/2 w-full h-auto">
+                  <h4 className="block lg:hidden text-base lg:text-2xl font-semibold mb-5">
+                    2. y = 2 sin (x - 60)
+                  </h4>
+                  <Image
+                    src="/images/grafik_sin_2.png"
+                    width={500}
+                    height={400}
+                    alt="Gambar Grafik dari fungsi y = sin x"
+                    loading="lazy"
+                    className="w-full h-auto rounded-xl aspect-video"
+                  />
+                </div>
               </div>
             </div>
           </ExplanationCard>
