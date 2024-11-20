@@ -20,7 +20,7 @@ const AboutCard = ({
   }
   return (
     <div
-      className={`relative col-span-2 lg:col-span-1 odd:lg:col-start-1 even:lg:col-start-2 ${rowStart} space-y-3 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16`}
+      className={`relative col-span-2 lg:col-span-1 odd:lg:col-start-1 even:lg:col-start-2 ${rowStart} space-y-3 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16`}
     >
       {row % 2 != 0 ? (
         <div className="hidden lg:block absolute -left-[52px] top-[95px] size-6 bg-primary dark:bg-jeruk rounded-full"></div>

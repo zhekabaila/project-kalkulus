@@ -18,7 +18,7 @@ const TeamCard = ({
   instagram,
 }: TeamCardProps) => {
   return (
-    <div className="flex flex-col bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+    <div className="flex flex-col bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
       <div className="relative flex gap-x-5">
         <div className="rounded-full object-center object-cover basis-1/4">
           <Image

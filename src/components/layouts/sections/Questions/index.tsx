@@ -32,9 +32,17 @@ const Questions = () => {
       id="soal"
       className="bg-center bg-cover bg-no-repeat px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
       style={{
-        backgroundImage: `url('/images/ttten${darkMode ? '-dark' : ''}.svg')`,
+        backgroundImage: `url('/images/bbblurry-2${
+          darkMode ? '-dark' : ''
+        }.svg')`,
       }}
     >
+      <div className="mb-10 lg:mb-20">
+        <h2 className="text-2xl lg:text-3xl font-semibold dark:text-sun">
+          Latihan Soal
+        </h2>
+        <div className="bg-primary dark:bg-jeruk h-1.5 w-28 mt-2"></div>
+      </div>
       <form
         onSubmit={(e) => {
           e.preventDefault()
@@ -42,7 +50,7 @@ const Questions = () => {
         }}
       >
         <ul className="space-y-9">
-          <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
               1. Tentukan periode fungsi y = 2 + 5 cos 2x
             </h4>
@@ -118,7 +126,7 @@ const Questions = () => {
             </ul>
           </li>
 
-          <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
               2. Nilai maksimum fungsi y = -8 cos (x - 10)
             </h4>
@@ -194,7 +202,7 @@ const Questions = () => {
             </ul>
           </li>
 
-          <li className="relative space-y-7 lg:space-y-7 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
               3. Pada interval 0&deg; &le; x &le; 120&deg;, titik maksimum dari
               y = 2 sin (3x – 30) adalah…

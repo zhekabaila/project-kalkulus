@@ -12,7 +12,7 @@ const Explanation = () => {
 
   return (
     <section
-      className="relative flex items-center justify-center p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk bg-cover bg-center bg-no-repeat"
+      className="p-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url(/images/${
           darkMode ? 'abstract-line-dark.svg' : 'abstract-line.svg'
@@ -20,6 +20,12 @@ const Explanation = () => {
       }}
       id="pembahasan"
     >
+      <div className="mb-10 lg:mb-20">
+        <h2 className="text-2xl lg:text-3xl font-semibold dark:text-sun">
+          Pembahasan Materi
+        </h2>
+        <div className="bg-primary dark:bg-jeruk h-1.5 w-28 mt-2"></div>
+      </div>
       <div className="size-full">
         <div className="grid grid-cols-2 gap-10 lg:gap-20">
           <ExplanationCard

@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, link, image }: ProjectCardProps) => {
   return (
-    <div className="lg:basis-1/4 bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30">
+    <div className="lg:basis-1/4 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30">
       <div className="flex items-center space-x-3 rounded-t-xl">
         <Image
           src={image}

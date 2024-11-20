@@ -20,7 +20,7 @@ const Hero = () => {
           }')`,
         }}
       >
-        <div className="flex flex-col items-center justify-center bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-2xl size-full border-2 border-gray-300/30 dark:border-gray-600/30 p-4 lg:p-0">
+        <div className="flex flex-col items-center justify-center bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-2xl size-full border-2 border-slate-400/20 dark:border-gray-600/30 p-4 lg:p-0">
           <h1 className="flex flex-col justify-center items-center gap-1 lg:gap-3 text-center font-medium text-3xl lg:text-[3.5vw] leading-tight dark:text-sun">
             <p>Selamat Datang Di</p>
             <p>

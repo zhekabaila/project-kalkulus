@@ -15,15 +15,13 @@ const OtherProjects = () => {
         backgroundImage: `url('/images/ttten${darkMode ? '-dark' : ''}.svg')`,
       }}
     >
-      <div className="flex">
-        <div className="bg-gray-200/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-gray-300/30 dark:border-gray-600/30 px-6 py-3">
-          <h2 className="text-lg lg:text-3xl font-semibold dark:text-sun">
-            Website Pembelajaran Lainnya
-          </h2>
-          <div className="bg-primary dark:bg-jeruk h-1.5 w-28 mt-2"></div>
-        </div>
+      <div className="mb-10 lg:mb-20">
+        <h2 className="text-2xl lg:text-3xl font-semibold dark:text-sun">
+          Website Pembelajaran Lainnya
+        </h2>
+        <div className="bg-primary dark:bg-jeruk h-1.5 w-28 mt-2"></div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
         {projects.map((item, index) => (
           <React.Fragment key={index}>
             <ProjectCard
