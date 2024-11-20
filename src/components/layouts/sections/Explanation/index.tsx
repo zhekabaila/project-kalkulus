@@ -367,6 +367,7 @@ const Explanation = () => {
                   src="https://cdn-web.ruangguru.com/landing-pages/assets/hs/grafik%20fungsi%20sinus%20y%20=%20sin%20x.jpg"
                   width={1000}
                   height={1000}
+                  loading="lazy"
                   alt="Grafik Fungsi Sinus"
                   className="aspect-square w-full h-auto"
                 />
@@ -383,6 +384,7 @@ const Explanation = () => {
                   src="https://cdn-web.ruangguru.com/landing-pages/assets/hs/grafik%20fungsi%20cosinus%20y%20=%20cos%20x.jpg"
                   width={1000}
                   height={1000}
+                  loading="lazy"
                   alt="Grafik Fungsi Sinus"
                   className="aspect-square w-full h-auto"
                 />
@@ -399,6 +401,7 @@ const Explanation = () => {
                   src="https://cdn-web.ruangguru.com/landing-pages/assets/hs/grafik%20fungsi%20tangen%20y%20=%20tan%20x.jpg"
                   width={1000}
                   height={1000}
+                  loading="lazy"
                   alt="Grafik Fungsi Sinus"
                   className="aspect-square w-full h-auto"
                 />

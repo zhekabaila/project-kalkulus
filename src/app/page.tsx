@@ -20,6 +20,9 @@ const Technologies = dynamic(
 const Questions = dynamic(
   () => import('@/components/layouts/sections/Questions')
 )
+const OtherProjects = dynamic(
+  () => import('@/components/layouts/sections/OtherProjects')
+)
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -47,6 +50,7 @@ export default function Home() {
           <Questions />
           <Technologies />
           <Teams />
+          <OtherProjects />
         </main>
         <Footer />
       </body>

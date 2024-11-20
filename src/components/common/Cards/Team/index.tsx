@@ -26,6 +26,7 @@ const TeamCard = ({
             width={100}
             height={100}
             alt="a"
+            loading="lazy"
             className="rounded-full size-full aspect-square object-cover object-center"
           />
         </div>

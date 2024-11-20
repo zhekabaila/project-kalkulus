@@ -44,7 +44,7 @@ const Calculator = () => {
   const updateGraph = () => {
     if (ggbApplet && fungsi) {
       ggbApplet.evalCommand(
-        `f: ${fungsi.amplitudo} ${fungsi.fungsi}(${fungsi.frekuensi}x ${
+        `f: y = ${fungsi.amplitudo} ${fungsi.fungsi}(${fungsi.frekuensi}x ${
           fungsi.fase ? `${fungsi.fase}` : ''
         }) ${fungsi.pergeseranVertikal ? `${fungsi.pergeseranVertikal}` : ''}`
       )
@@ -64,14 +64,14 @@ const Calculator = () => {
       <div className="flex flex-col gap-5">
         <div className="bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">
           <p>
-            f(x) = <b>{fungsi.amplitudo || 'A'}</b> <b>{fungsi.fungsi}</b>(
+            y = <b>{fungsi.amplitudo || 'a'}</b> <b>{fungsi.fungsi}</b>(
             <b>{fungsi.frekuensi || 'k'}</b>
             <i>x</i> <b>{fungsi.fase || '+ b'}</b>){' '}
             <b>{fungsi.pergeseranVertikal || '+ c'}</b>
           </p>
         </div>
         <div className="flex items-center bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">
-          <p>f(x) = </p>
+          <p>y = </p>
           <input
             type="text"
             className="ml-2 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -80,7 +80,7 @@ const Calculator = () => {
             }}
             id="amplitudo"
             name="amplitudo"
-            placeholder="A"
+            placeholder="a"
             value={fungsi.amplitudo}
             onChange={(e) =>
               setFungsi((r) => {
@@ -178,42 +178,81 @@ const Calculator = () => {
         </button>
         <div className="mt-12">
           <h4 className="text-base lg:text-lg font-semibold tracking-widest">
-            f(x) = {fungsi.amplitudo} {fungsi.fungsi}({fungsi.frekuensi}x
+            y = {fungsi.amplitudo} {fungsi.fungsi}({fungsi.frekuensi}x
             {fungsi.fase ? `${fungsi.fase}` : ''}){' '}
             {fungsi.pergeseranVertikal ? `${fungsi.pergeseranVertikal}` : ''}
           </h4>
           <h4 className="text-base lg:text-lg font-semibold">Penjelasan:</h4>
           <div className="grid grid-cols-6 gap-2 mt-5">
-            <p className="font-medium text-sm lg:text-base">
-              {fungsi.amplitudo || 'A'}
-            </p>
-            <p className="col-span-5 text-sm lg:text-base">
-              : Adalah Amplitudo
-            </p>
+            {fungsi.amplitudo && (
+              <>
+                <p className="font-medium text-sm lg:text-base">
+                  |{fungsi.amplitudo || 'a'}|
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">
+                  : Adalah Amplitudo
+                </p>
 
-            <p className="font-medium text-sm lg:text-base">
-              {fungsi.fungsi || 'sin'}
-            </p>
-            <p className="col-span-5 text-sm lg:text-base">: Adalah Fungsi</p>
+                <p className="font-medium text-sm lg:text-base">
+                  |{fungsi.amplitudo || 'a'}|{' '}
+                  {fungsi.pergeseranVertikal ?? fungsi.pergeseranVertikal}
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">
+                  : Adalah nilai maksimum
+                </p>
 
-            <p className="font-medium text-sm lg:text-base">
-              {fungsi.frekuensi || 'k'}
-            </p>
-            <p className="col-span-5 text-sm lg:text-base">
-              : Adalah Frekuensi
-            </p>
+                <p className="font-medium text-sm lg:text-base">
+                  -|{fungsi.amplitudo || 'a'}|{' '}
+                  {fungsi.pergeseranVertikal ?? fungsi.pergeseranVertikal}
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">
+                  : Adalah nilai minimum
+                </p>
+              </>
+            )}
 
-            <p className="font-medium text-sm lg:text-base">
-              {fungsi.fase || 'b'}
-            </p>
-            <p className="col-span-5 text-sm lg:text-base">: Adalah Fase</p>
+            {fungsi.fungsi && (
+              <>
+                <p className="font-medium text-sm lg:text-base">
+                  {fungsi.fungsi || 'sin'}
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">
+                  : Adalah Fungsi
+                </p>
+              </>
+            )}
 
-            <p className="font-medium text-sm lg:text-base">
-              {fungsi.pergeseranVertikal || 'c'}
-            </p>
-            <p className="col-span-5 text-sm lg:text-base">
-              : Adalah Pergeseran Vertikal
-            </p>
+            {fungsi.frekuensi && (
+              <>
+                <p className="font-medium text-sm lg:text-base">
+                  {fungsi.frekuensi || 'k'}
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">
+                  : Adalah Frekuensi
+                </p>
+              </>
+            )}
+
+            {fungsi.fase && (
+              <>
+                <p className="font-medium text-sm lg:text-base">
+                  {fungsi.fase.trim().replace(/[+\-/*]/, '') || 'b'}
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">: Adalah Fase</p>
+              </>
+            )}
+
+            {fungsi.pergeseranVertikal && (
+              <>
+                <p className="font-medium text-sm lg:text-base">
+                  {fungsi.pergeseranVertikal.trim().replace(/[+\-/*]/, '') ||
+                    'c'}
+                </p>
+                <p className="col-span-5 text-sm lg:text-base">
+                  : Adalah Pergeseran Vertikal
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>
