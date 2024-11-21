@@ -3,7 +3,7 @@
 
     kel. 1: 
     kel. 2: https://kalkulus-kubik.vercel.app/
-    kel. 3
+    kel. 3: https://kalkulus-limit-gamma.vercel.app/
     kel. 4: https://kuadrat.vercel.app/
     kel. 5: https://eksponensial.vercel.app/
     kel. 6: 
@@ -28,10 +28,10 @@ export const projects = [
   },
   {
     title: 'Limit Fungsi',
-    link: '#fungsi-eksponensial',
+    link: 'https://kalkulus-limit-gamma.vercel.app/',
     description:
-      'Fungsi eksponensial adalah fungsi yang memiliki bentuk garis lurus yang meliputi semua bilangan positif, dimana fungsi ini terlihat seperti pangkal tetap pada sumbu y. Fungsi eksponensial dapat diturunkan menjadi fungsi logaritma.',
-    image: '/images/projects/fungsi_turunan.png',
+      'Limit dalam matematika adalah nilai yang didekati oleh suatu fungsi saat variabel inputnya mendekati nilai tertentu. Konsep limit ini penting untuk memahami perilaku fungsi aljabar di sekitar titik tertentu, meskipun nilai fungsi di titik itu mungkin tidak terdefinisi. Secara umum, kita menulis limit fungsi sebagai berikut',
+    image: '/images/projects/limit_fungsi.png',
   },
   {
     title: 'Fungsi Kuadrat',

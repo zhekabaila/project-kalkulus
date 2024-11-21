@@ -430,7 +430,6 @@ const Explanation = () => {
             <iframe
               src="https://www.youtube.com/embed/H0ove6GBUiA?si=aMOsi9DFL-RU3RL9"
               title="YouTube video player"
-              frameBorder={0}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
@@ -547,6 +546,21 @@ const Explanation = () => {
                 </div>
               </div>
             </div>
+          </ExplanationCard>
+
+          <ExplanationCard
+            title="Membahas Contoh Soal dan"
+            highlightTitle="Penyelesaiannya"
+            span
+          >
+            <iframe
+              src="https://www.youtube.com/embed/8-8KyTn6UxE?si=JQitxqP4Ne20cP1_"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full h-auto aspect-video"
+            ></iframe>
           </ExplanationCard>
         </div>
       </div>
