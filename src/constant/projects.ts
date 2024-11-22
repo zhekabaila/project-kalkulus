@@ -1,7 +1,7 @@
 /**
  * LINK PROJECT KALKULUS
 
-    kel. 1: 
+    kel. 1: https://dollette05.github.io/kalkulus-project-turunan/index.html
     kel. 2: https://kalkulus-kubik.vercel.app/
     kel. 3: https://kalkulus-limit-gamma.vercel.app/
     kel. 4: https://kuadrat.vercel.app/
@@ -14,10 +14,10 @@
 export const projects = [
   {
     title: 'Turunan',
-    link: '#fungsi-eksponensial',
+    link: 'https://dollette05.github.io/kalkulus-project-turunan/index.html',
     description:
-      'Fungsi eksponensial adalah fungsi yang memiliki bentuk garis lurus yang meliputi semua bilangan positif, dimana fungsi ini terlihat seperti pangkal tetap pada sumbu y. Fungsi eksponensial dapat diturunkan menjadi fungsi logaritma.',
-    image: '/images/projects/fungsi_turunan.png',
+      'Dalam Teknik Informatika, kalkulus memiliki banyak aplikasi penting, terutama dalam analisis data, pembelajaran mesin, dan pemrosesan sinyal. Salah satunya adalah dalam optimasi algoritma, di mana kalkulus digunakan untuk menemukan titik optimal dalam algoritma, misalnya saat mengoptimalkan jaringan atau mencari jalur terpendek.',
+    image: '/images/projects/turunan.png',
   },
   {
     title: 'Fungsi Kubik',

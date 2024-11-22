@@ -31,7 +31,7 @@ const ProjectCard = ({ title, description, link, image }: ProjectCardProps) => {
           target="_blank"
           className="text-primary font-semibold dark:text-jeruk hover:text-primary-dark mt-3"
         >
-          Kunjingi Website
+          Kunjungi Website
         </Link>
       </div>
     </div>
