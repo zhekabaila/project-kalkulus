@@ -1,10 +1,5 @@
 import React from 'react'
-import {
-  RiNextjsFill,
-  RiReactjsFill,
-  RiTailwindCssFill,
-  RiNodejsFill,
-} from 'react-icons/ri'
+import { RiNextjsFill, RiTailwindCssFill, RiNodejsFill } from 'react-icons/ri'
 import { BiLogoTypescript } from 'react-icons/bi'
 
 interface TechProps {
@@ -14,11 +9,6 @@ interface TechProps {
 }
 
 export const technologies: TechProps[] = [
-  {
-    name: 'React Js',
-    icon: <RiReactjsFill size={100} />,
-    link: 'https://react.dev/',
-  },
   {
     name: 'Next Js',
     icon: <RiNextjsFill size={100} />,

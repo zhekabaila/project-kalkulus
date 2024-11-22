@@ -1,8 +1,6 @@
-'use client'
 
 import MemberCard from '@/components/common/Cards/Team'
 import { teams } from '@/constant/teams'
-import { useTheme } from '@/contexts/themeContext'
 import React from 'react'
 
 interface TeamCardProps {
@@ -14,15 +12,12 @@ interface TeamCardProps {
 }
 
 const Teams = () => {
-  const { darkMode } = useTheme()
 
   return (
     <section
       className="relative bg-center bg-cover bg-no-repeat px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
       style={{
-        backgroundImage: `url('/images/bbblurry-1${
-          darkMode ? '-dark' : ''
-        }.svg')`,
+        backgroundImage: `url('/images/bbburst.svg')`,
       }}
       id="anggota"
     >

@@ -10,9 +10,11 @@ const OtherProjects = () => {
   return (
     <section
       id="soal"
-      className="bg-center bg-cover bg-no-repeat px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      className="bg-center bg-cover bg-no-repeat px-4 py-20 lg:p-36 border-y-4 border-y-blue-500 dark:border-y-jeruk"
       style={{
-        backgroundImage: `url('/images/ttten${darkMode ? '-dark' : ''}.svg')`,
+        backgroundImage: `url('/images/bbblurry-1${
+          darkMode ? '-dark' : ''
+        }.svg')`,
       }}
     >
       <div className="mb-10 lg:mb-20">

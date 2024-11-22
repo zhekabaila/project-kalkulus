@@ -1,5 +1,5 @@
 'use client'
-import { useTheme } from '@/contexts/themeContext'
+
 import { useState } from 'react'
 import { AiOutlineSend } from 'react-icons/ai'
 
@@ -15,7 +15,6 @@ const Questions = () => {
     soal_3: '',
   })
   const [showCheckAnswer, setShowCheckAnswer] = useState<boolean>(false)
-  const { darkMode } = useTheme()
 
   const setValue = (questionNumber: 1 | 2 | 3, value: string) => {
     setShowCheckAnswer(false)
@@ -30,11 +29,9 @@ const Questions = () => {
   return (
     <section
       id="soal"
-      className="bg-center bg-cover bg-no-repeat px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
+      className="bg-center bg-cover bg-opacity-20 bg-no-repeat px-4 py-20 lg:p-36 border-t-4 border-t-blue-500 dark:border-t-jeruk"
       style={{
-        backgroundImage: `url('/images/bbblurry-2${
-          darkMode ? '-dark' : ''
-        }.svg')`,
+        backgroundImage: `url('/images/bbburst.svg')`,
       }}
     >
       <div className="mb-10 lg:mb-20">
@@ -50,7 +47,7 @@ const Questions = () => {
         }}
       >
         <ul className="space-y-9">
-          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
               1. Tentukan periode fungsi y = 2 + 5 cos 2x
             </h4>
@@ -126,7 +123,7 @@ const Questions = () => {
             </ul>
           </li>
 
-          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
               2. Nilai maksimum fungsi y = -8 cos (x - 10)
             </h4>
@@ -202,7 +199,7 @@ const Questions = () => {
             </ul>
           </li>
 
-          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
+          <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
               3. Pada interval 0&deg; &le; x &le; 120&deg;, titik maksimum dari
               y = 2 sin (3x – 30) adalah…
@@ -296,7 +293,7 @@ const Questions = () => {
 
           {showCheckAnswer && (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-              <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+              <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
                 <div className="space-y-5">
                   <h4 className="text-base lg:text-lg text-primary dark:text-jeruk font-semibold">
                     Soal No. 1
@@ -335,7 +332,7 @@ const Questions = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+              <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
                 <div className="space-y-5">
                   <h4 className="text-base lg:text-lg text-primary dark:text-jeruk font-semibold">
                     Soal No. 2
@@ -361,7 +358,7 @@ const Questions = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-md rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
+              <div className="relative space-y-3 lg:space-y-7 bg-white/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-white/30 dark:border-gray-600/30 p-6 lg:p-16">
                 <div className="space-y-5">
                   <h4 className="text-base lg:text-lg text-primary dark:text-jeruk font-semibold">
                     Soal No. 3
