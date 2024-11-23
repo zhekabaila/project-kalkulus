@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between lg:justify-center gap-x-2 fixed top-0 w-screen z-50 px-4 lg:px-0 pt-4 lg:pt-5">
+      <nav className="flex items-center justify-between lg:justify-center gap-x-2 fixed top-0 left-0 right-0 w-screen z-50 px-4 lg:px-0 pt-4 lg:pt-5">
         <div
           className={`flex items-center justify-between lg:justify-normal w-full lg:w-auto ${
             blurNavbar
