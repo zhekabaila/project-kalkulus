@@ -2,6 +2,7 @@
 
 import { useTheme } from '@/contexts/themeContext'
 import { useRef, useState, useEffect } from 'react'
+import { MdZoomIn, MdZoomOut } from 'react-icons/md'
 
 const ManualCalculator = () => {
   const { darkMode } = useTheme()
@@ -68,7 +69,7 @@ const ManualCalculator = () => {
     const ctx = canvas.getContext('2d')
     const { function: trigFunction } = inputs
 
-    const amplitude = parseInt(inputs.amplitude)
+    const amplitude = parseInt(inputs.amplitude) || 1
     const frequency = parseInt(inputs.frequency) || 1
     const phase = parseInt(inputs.phase) || 0
     const verticalShift = parseInt(inputs.verticalShift) || 0
@@ -163,16 +164,16 @@ const ManualCalculator = () => {
             <button
               type="button"
               onClick={zoomIn}
-              className="bg-primary dark:bg-jeruk text-sun font-bold py-2 px-4 rounded-lg transition duration-300"
+              className="bg-primary dark:bg-jeruk text-sun font-medium py-2 px-4 rounded-lg transition duration-300"
             >
-              Zoom In
+              <MdZoomOut size={24} className="text-sun" />
             </button>
             <button
               onClick={zoomOut}
               type="button"
-              className="bg-primary dark:bg-jeruk text-sun font-bold py-2 px-4 rounded-lg transition duration-300"
+              className="bg-primary dark:bg-jeruk text-sun font-medium py-2 px-4 rounded-lg transition duration-300"
             >
-              Zoom Out
+              <MdZoomIn size={24} className="text-sun" />
             </button>
           </div>
         </div>
@@ -181,8 +182,14 @@ const ManualCalculator = () => {
             <p>
               y = <b>{inputs.amplitude || 'a'}</b> <b>{inputs.function}</b>(
               <b>{inputs.frequency || 'k'}</b>
-              <i>x</i> <b>{inputs.phase || '+ b'}</b>){' '}
-              <b>{inputs.verticalShift || '+ c'}</b>
+              <i>x</i>{' '}
+              <b>
+                {inputs.phaseSymbol} {inputs.phase || 'b'}
+              </b>
+              ){' '}
+              <b>
+                {inputs.verticalShiftSymbol} {inputs.verticalShift || 'c'}
+              </b>
             </p>
           </div>
           <div className="flex items-center bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">

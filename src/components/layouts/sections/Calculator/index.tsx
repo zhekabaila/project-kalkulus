@@ -18,13 +18,26 @@ const Calculator = () => {
         </h2>
         <div className="bg-primary dark:bg-jeruk h-1.5 w-28 mt-2"></div>
       </div>
-      <div className="flex items-center gap-x-8 mb-8">
+      <div className="flex items-center gap-x-8 mb-8 w-full lg:w-auto">
         <button
-          className="bg-primary dark:bg-jeruk px-6 py-2.5 rounded-md text-sun font-semibold"
-          type="button"
+          className="relative grid grid-cols-2 gap-x-4 bg-primary dark:bg-jeruk p-2 rounded-xl text-sun font-medium w-full lg:w-auto"
           onClick={() => setGeogebraCalculator((e) => !e)}
+          type="button"
         >
-          {geogebraCalculator ? 'Geogebra' : 'Manual'}
+          <p
+            className={`text-sun py-2 px-4 ${
+              geogebraCalculator ? 'bg-slate-100/30 rounded-lg' : ''
+            }`}
+          >
+            Geogebra
+          </p>
+          <p
+            className={`text-sun py-2 px-4 ${
+              !geogebraCalculator ? 'bg-slate-100/30 rounded-lg' : ''
+            }`}
+          >
+            Manual
+          </p>
         </button>
       </div>
       {geogebraCalculator ? <GeogebraCalculator /> : <ManualCalculator />}
