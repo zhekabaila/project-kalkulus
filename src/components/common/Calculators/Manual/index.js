@@ -13,7 +13,9 @@ const ManualCalculator = () => {
     function: 'sin',
     frequency: '',
     phase: '',
+    phaseSymbol: '+',
     verticalShift: '',
+    verticalShiftSymbol: '+',
   })
 
   const handleInputChange = (e) => {
@@ -86,7 +88,13 @@ const ManualCalculator = () => {
     ctx.beginPath()
 
     for (let x = -centerX; x <= centerX; x++) {
-      const angle = frequency * (x / scaleX) + parseFloat(phase)
+      const angle =
+        frequency * (x / scaleX) +
+        (['+', '-'].includes(inputs.phaseSymbol)
+          ? inputs.phaseSymbol === '+'
+            ? parseFloat(phase)
+            : -parseFloat(phase)
+          : 0)
       let trigValue
 
       switch (trigFunction.toLowerCase()) {
@@ -105,7 +113,11 @@ const ManualCalculator = () => {
       }
 
       const y =
-        amplitude * trigValue * scaleY + parseFloat(verticalShift) * scaleY
+        amplitude * trigValue * scaleY +
+        (inputs.verticalShiftSymbol === '+'
+          ? parseFloat(verticalShift)
+          : -parseFloat(verticalShift)) *
+          scaleY
       const canvasX = centerX + x
       const canvasY = centerY - y
 
@@ -213,28 +225,54 @@ const ManualCalculator = () => {
               onChange={handleInputChange}
             />
             <i>x</i>
+            <select
+              className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
+              style={{
+                width: `${Math.max(2, inputs.phaseSymbol.length)}ch`,
+              }}
+              id="phaseSymbol"
+              name="phaseSymbol"
+              defaultValue={inputs.phaseSymbol}
+              onChange={handleInputChange}
+            >
+              <option value="+">+</option>
+              <option value="-">-</option>
+            </select>
             <input
               type="text"
               className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
               style={{
-                width: `${Math.max(3, inputs.phase.length)}ch`,
+                width: `${Math.max(2, inputs.phase.length)}ch`,
               }}
               id="phase"
               name="phase"
-              placeholder="+ b"
+              placeholder="b"
               value={inputs.phase}
               onChange={handleInputChange}
             />
             )
+            <select
+              className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
+              style={{
+                width: `${Math.max(2, inputs.verticalShiftSymbol.length)}ch`,
+              }}
+              id="verticalShiftSymbol"
+              name="verticalShiftSymbol"
+              defaultValue={inputs.verticalShiftSymbol}
+              onChange={handleInputChange}
+            >
+              <option value="+">+</option>
+              <option value="-">-</option>
+            </select>
             <input
               type="text"
               className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
               style={{
-                width: `${Math.max(3, inputs.verticalShift.length)}ch`,
+                width: `${Math.max(2, inputs.verticalShift.length)}ch`,
               }}
               id="verticalShift"
               name="verticalShift"
-              placeholder="+ c"
+              placeholder="c"
               value={inputs.verticalShift}
               onChange={handleInputChange}
             />
@@ -249,8 +287,10 @@ const ManualCalculator = () => {
             <div className="mt-12">
               <h4 className="text-base lg:text-lg font-semibold tracking-widest">
                 y = {inputs.amplitude} {inputs.function}({inputs.frequency}x
-                {inputs.phase ? `${inputs.phase}` : ''}){' '}
-                {inputs.verticalShift ? `${inputs.verticalShift}` : ''}
+                {inputs.phase && ' ' + inputs.phaseSymbol + ' '}
+                {inputs.phase ? inputs.phase : ''}){' '}
+                {inputs.verticalShift && inputs.verticalShiftSymbol}{' '}
+                {inputs.verticalShift ? inputs.verticalShift : ''}
               </h4>
               <h4 className="text-base lg:text-lg font-semibold">
                 Penjelasan:
@@ -267,6 +307,7 @@ const ManualCalculator = () => {
 
                     <p className="font-medium text-sm lg:text-base">
                       |{inputs.amplitude || 'a'}|{' '}
+                      {inputs.verticalShift && inputs.verticalShiftSymbol}
                       {inputs.verticalShift ?? inputs.verticalShift}
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
@@ -275,6 +316,7 @@ const ManualCalculator = () => {
 
                     <p className="font-medium text-sm lg:text-base">
                       -|{inputs.amplitude || 'a'}|{' '}
+                      {inputs.verticalShift && inputs.verticalShiftSymbol}
                       {inputs.verticalShift ?? inputs.verticalShift}
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">

@@ -18,3 +18,9 @@ div,
 label {
   @apply text-[#3d4048] dark:text-sun;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
