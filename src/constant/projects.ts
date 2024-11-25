@@ -61,4 +61,11 @@ export const projects = [
       'Website ini dirancang bagi anda yang kesulitan untuk mencari materi pembelajaran kalkulus yang mudah dipahami, dengan anda belajar di website ini anda akan cepat memahami materi dengan struktur materi dan soal lathan yang mudah dipahami.',
     image: '/images/projects/fungsi_linear_rasional_irasional.png',
   },
+  {
+    title: 'Kalkulus I : Fungsi',
+    link: 'https://calcourses.nvs.web.id/',
+    description:
+      'Calcourses hadir sebagai solusi pembelajaran Kalkulus I yang interaktif dan mudah diakses, dengan fokus pada materi dasar seperti fungsi linear, kuadrat, dan kubik. Platform ini dirancang untuk membantu mahasiswa dan pelajar memahami konsep kalkulus melalui kombinasi materi terstruktur, latihan soal, dan visualisasi grafik yang dapat digenerate secara otomatis. ',
+    image: '/images/projects/fungsi.png',
+  },
 ]
