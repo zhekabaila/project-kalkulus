@@ -62,7 +62,7 @@ export const projects = [
     image: '/images/projects/fungsi_linear_rasional_irasional.png',
   },
   {
-    title: 'Kalkulus I : Fungsi',
+    title: 'Calcourses',
     link: 'https://calcourses.nvs.web.id/',
     description:
       'Calcourses hadir sebagai solusi pembelajaran Kalkulus I yang interaktif dan mudah diakses, dengan fokus pada materi dasar seperti fungsi linear, kuadrat, dan kubik. Platform ini dirancang untuk membantu mahasiswa dan pelajar memahami konsep kalkulus melalui kombinasi materi terstruktur, latihan soal, dan visualisasi grafik yang dapat digenerate secara otomatis. ',
