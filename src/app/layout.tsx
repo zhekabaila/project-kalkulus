@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google'
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import './globals.css'
+import Script from 'next/script'
 
 const Footer = dynamic(() => import('@/components/layouts/sections/Footer'))
 const Navbar = dynamic(() => import('@/components/layouts/sections/Navbar'))
@@ -73,6 +74,12 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
+        <Script
+          type="text/javascript"
+          id="MathJax-script"
+          async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        />
         <body
           className={`${poppins.className} antialiased bg-secondary dark:bg-shadow max-w-[2400px] mx-auto`}
         >

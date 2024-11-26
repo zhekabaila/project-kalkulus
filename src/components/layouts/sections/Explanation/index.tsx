@@ -1,11 +1,9 @@
 'use client'
-
 import Image from 'next/image'
 import { useTheme } from '@/contexts/themeContext'
 import TrignonemetryTable from '@/components/common/Table/Trigonometri'
 import ExplanationCard from '@/components/common/Cards/Explanation'
 import Link from 'next/link'
-import Pecahan from '@/components/common/Pecahan'
 
 const Explanation = () => {
   const { darkMode } = useTheme()
@@ -99,13 +97,19 @@ const Explanation = () => {
                 </h4>
                 <ul className="mt-4 space-y-2">
                   <li>
-                    sin<sup>2</sup>&theta; + cos<sup>2</sup>&theta; = 1
+                    <p className="flex justify-start">
+                      {String.raw`$$sin^2 \theta + cos^2 \theta = 1$$`}
+                    </p>
                   </li>
                   <li>
-                    1 + tan<sup>2</sup>&theta; = sec<sup>2</sup>&theta;
+                    <p className="flex justify-start">
+                      {String.raw`$$1 + tan^2 \theta = sec^2 \theta$$`}
+                    </p>
                   </li>
                   <li>
-                    1 + cot<sup>2</sup>&theta; = csc<sup>2</sup>&theta;
+                    <p className="flex justify-start">
+                      {String.raw`$$1 + cot^2 \theta = csc^2 \theta$$`}
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -125,27 +129,25 @@ const Explanation = () => {
                     <h5 className="font-medium text-primary dark:text-jeruk">
                       Sinus:
                     </h5>
-                    <p>sin(a &plusmn; b) = sin a cos b &plusmn; cos a sin b</p>
+                    <p className="flex justify-start">
+                      {String.raw`$$sin(a \pm b) = {sin \space a \space cos \space b \pm cos \space a \space sin \space b}$$`}
+                    </p>
                   </li>
                   <li>
                     <h5 className="font-medium text-primary dark:text-jeruk">
                       Cosinus:
                     </h5>
-                    <p>cos(a &plusmn; b) = cos a cos b &#8723; sin a sin b</p>
+                    <p className="flex justify-start">
+                      {String.raw`$$cos(a \pm b) = {cos \space a \space cos \space b \mp sin \space a \space sin \space b}$$`}
+                    </p>
                   </li>
                   <li>
                     <h5 className="font-medium text-primary dark:text-jeruk">
                       Tangen:
                     </h5>
-                    <div className="flex items-center gap-2">
-                      <div>tan(a &plusmn; b) =</div>
-                      <div className="flex flex-col">
-                        <span>tan a &#8723; tan b</span>
-                        <span className="border-t border-t-black dark:border-t-sun">
-                          1 &#8723; tan a tan b
-                        </span>
-                      </div>
-                    </div>
+                    <p className="flex justify-start">
+                      {String.raw`$$tan(a \pm b) = {tan \space a \mp tan \space b \over 1 \mp tan \space a \space tan \space b}$$`}
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -162,40 +164,26 @@ const Explanation = () => {
               diturunkan.
             </p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 text-sm lg:text-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-10 text-sm lg:text-lg">
               <div>
                 <h5 className="font-medium text-primary dark:text-jeruk">
                   Turunan:
                 </h5>
                 <ul className="mt-4 space-y-4">
-                  <li className="flex items-center gap-2">
-                    <div className="flex flex-col justify-center items-center">
-                      <span>d</span>
-                      <span className="border-t border-t-black dark:border-t-sun">
-                        dx
-                      </span>
-                    </div>
-                    <div>sin x = cos x</div>
+                  <li>
+                    <p className="flex justify-start">
+                      {String.raw`$$ {d \over dx} \space sin \space x =  cos \space x$$`}
+                    </p>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <div className="flex flex-col justify-center items-center">
-                      <span>d</span>
-                      <span className="border-t border-t-black dark:border-t-sun">
-                        dx
-                      </span>
-                    </div>
-                    <div>cos x = -sin x</div>
+                  <li>
+                    <p className="flex justify-start">
+                      {String.raw`$$ {d \over dx} \space cos \space x =  -sin \space x$$`}
+                    </p>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <div className="flex flex-col justify-center items-center">
-                      <span>d</span>
-                      <span className="border-t border-t-black dark:border-t-sun">
-                        dx
-                      </span>
-                    </div>
-                    <div>
-                      tan x = sec<sup>2</sup> x
-                    </div>
+                  <li>
+                    <p className="flex justify-start">
+                      {String.raw`$$ {d \over dx} \space tan \space x = sec^2 x$$`}
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -205,14 +193,18 @@ const Explanation = () => {
                 </h5>
                 <ul className="mt-4 space-y-4">
                   <li>
-                    <p>&int; sin x dx = - cos x + C</p>
+                    <p className="flex justify-start">
+                      {String.raw`$$ \int \space sin \space x \space dx = -cos \space x + C$$`}
+                    </p>
                   </li>
                   <li>
-                    <p>&int; cos x dx = sin x + C</p>
+                    <p className="flex justify-start">
+                      {String.raw`$$ \int \space cos \space x \space dx = sin \space x + C$$`}
+                    </p>
                   </li>
                   <li>
-                    <p>
-                      &int; sec<sup>2</sup> x dx = tan x + C
+                    <p className="flex justify-start">
+                      {String.raw`$$ \int \space sec^2 \space x \space dx = tan \space x + C$$`}
                     </p>
                   </li>
                 </ul>
@@ -254,15 +246,15 @@ const Explanation = () => {
                     trigonometri. Untuk fungsi sinus dan kosinus standar,
                     amplitudo adalah 1. Amplitudo menunjukkan {'"'}
                     tinggi
-                    {'"'}
-                    {'"'}
+                    {'" '}
                     atau {'"'}ketinggian{'"'} grafik dari titik keseimbangannya
                     (sumbu x).
                   </li>
                   <li>
-                    <b>Contoh:</b> Pada grafik y = 2 sin ⁡x, amplitudo adalah 2,
-                    yang berarti grafik akan mencapai nilai maksimum 2 dan
-                    minimum -2.
+                    <b>Contoh:</b> Pada grafik{' '}
+                    <span>{String.raw`$$ y = 2 \space sin \space x$$`}</span>{' '}
+                    amplitudo adalah 2, yang berarti grafik akan mencapai nilai
+                    maksimum 2 dan minimum -2.
                   </li>
                 </ul>
               </li>
@@ -282,7 +274,7 @@ const Explanation = () => {
                     sumbu x.
                   </li>
                   <li>
-                    <b>Fungsi tangen</b> memiliki periode standar π\piπ, karena
+                    <b>Fungsi tangen</b> memiliki periode standar π/piπ, karena
                     grafik tangen mengulang pola setiap π\piπ satuan pada sumbu
                     x.
                   </li>
@@ -299,16 +291,10 @@ const Explanation = () => {
                     terbalik dengan periode.
                   </li>
                   <li>
-                    <div className="flex items-center gap-x-3">
-                      Jika f(x) = sin⁡(bx), maka frekuensi adalah b, dan periode
-                      menjadi{' '}
-                      <span className="flex flex-col items-center justify-center">
-                        <span>2&pi;</span>
-                        <span className="border-t border-t-black dark:border-t-sun">
-                          {' '}
-                          b{' '}
-                        </span>
-                      </span>
+                    <div className="gap-x-3">
+                      Jika, <span>{String.raw`$$ f(x) = sin(bx) $$`}</span>
+                      maka frekuensi adalah b, dan periode menjadi{' '}
+                      <span>{String.raw`$$ 2 \pi \over b $$`}</span>
                     </div>
                   </li>
                 </ul>
@@ -326,10 +312,11 @@ const Explanation = () => {
                     kanan atau ke kiri dari posisi asalnya.
                   </li>
                   <li>
-                    Pada fungsi seperti <b>y = sin⁡(x − c)</b>, <b>c</b> adalah
-                    perpindahan fase, yang menyebabkan grafik bergeser <b>c</b>{' '}
-                    satuan ke kanan jika <b>c</b> positif, atau <b>c</b> satuan
-                    ke kiri jika <b>c</b> negatif.
+                    Pada fungsi seperti{' '}
+                    <span>{String.raw`$$ y = sin⁡(x − c) $$`}</span>
+                    <b>c</b> adalah perpindahan fase, yang menyebabkan grafik
+                    bergeser <b>c</b> satuan ke kanan jika <b>c</b> positif,
+                    atau <b>c</b> satuan ke kiri jika <b>c</b> negatif.
                   </li>
                 </ul>
               </li>
@@ -345,9 +332,10 @@ const Explanation = () => {
                     y=0, tetapi bisa bergeser ke atas atau ke bawah.
                   </li>
                   <li>
-                    Jika fungsi ditulis seperti <b>y = A sin⁡(x) + D</b>, maka{' '}
-                    <b>D</b> adalah pergeseran vertikal yang menentukan posisi
-                    sumbu tengah.
+                    Jika fungsi ditulis seperti{' '}
+                    <span>{String.raw`$$ y = A \space sin⁡(x) + D $$`}</span>
+                    maka <b>D</b> adalah pergeseran vertikal yang menentukan
+                    posisi sumbu tengah.
                   </li>
                 </ul>
               </li>
@@ -445,56 +433,31 @@ const Explanation = () => {
             <div className="grid grid-cols-1 gap-10">
               <div className="flex flex-col-reverse gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
                 <div className="lg:basis-1/2 text-base lg:text-lg">
-                  <h4 className="hidden lg:block text-base lg:text-2xl font-semibold mb-5">
-                    1. y = sin x
+                  <h4 className="hidden lg:flex items-center text-base lg:text-2xl font-semibold mb-5">
+                    <span>{String.raw`$$ 1. \space y = sin \space x $$`}</span>
                   </h4>
                   <p>Penyelesaian:</p>
-                  <p>y = sin x</p>
-                  <div className="grid grid-cols-4 items-center *:pb-1 *:pt-4 mt-5">
-                    <p className="col-start-1">x = 0</p>
-                    <p className="">sin 0 = 0</p>
+                  <p className="flex justify-start">{String.raw`$$ y = sin \space x $$`}</p>
+                  <div className="grid grid-cols-4 items-center mt-3">
+                    <p className="flex justify-start">{String.raw`$$ x = 0 $$`}</p>
+                    <p className="flex justify-start">{String.raw`$$ sin \space 0 = 0 $$`}</p>
 
-                    <p className="col-start-1">x = 30</p>
-                    <div className="flex items-center gap-x-2 col-span-2">
-                      sin 30 ={' '}
-                      <Pecahan
-                        atas="1"
-                        bawah="2"
-                        textColor="text-[#3d4048] dark:text-sun"
-                      />
-                    </div>
+                    <p className="col-start-1 flex justify-start">{String.raw`$$ x = 30 $$`}</p>
+                    <p className="col-span-2 flex justify-start">{String.raw`$$ sin \space 30 = {1 \over 2} $$`}</p>
 
-                    <p className="col-start-1">x = 45</p>
-                    <div className="flex items-center gap-x-2 col-span-2 text-[#3d4048]">
-                      sin 45 ={' '}
-                      <Pecahan
-                        atas="1"
-                        bawah="2"
-                        sesudah="&radic;2"
-                        textColor="text-[#3d4048] dark:text-sun"
-                      />
-                    </div>
+                    <p className="col-start-1 flex justify-start">{String.raw`$$ x = 45 $$`}</p>
+                    <p className="col-span-2 flex justify-start">{String.raw`$$ sin \space 45 = {1 \over 2} \sqrt{2} $$`}</p>
 
-                    <p className="col-start-1">x = 60</p>
-                    <div className="flex items-center gap-x-2 col-span-2 text-[#3d4048]">
-                      sin 60 ={' '}
-                      <Pecahan
-                        atas="1"
-                        bawah="2"
-                        sesudah="&radic;3"
-                        textColor="text-[#3d4048] dark:text-sun"
-                      />
-                    </div>
+                    <p className="col-start-1 flex justify-start">{String.raw`$$ x = 60 $$`}</p>
+                    <p className="col-span-2 flex justify-start">{String.raw`$$ sin \space 60 = {1 \over 2} \sqrt{3} $$`}</p>
 
-                    <p className="col-start-1">x = 90</p>
-                    <div className="flex items-center gap-x-2 col-span-2 text-[#3d4048]">
-                      sin 90 = 1
-                    </div>
+                    <p className="col-start-1 flex justify-start">{String.raw`$$ x = 90 $$`}</p>
+                    <p className="col-span-2 flex justify-start">{String.raw`$$ sin \space 90 = 1 $$`}</p>
                   </div>
                 </div>
                 <div className="lg:basis-1/2 w-full h-auto">
                   <h4 className="block lg:hidden text-base lg:text-2xl font-semibold mb-5">
-                    1. y = sin x
+                    <span>{String.raw`$$ 1. \space y = sin \space x $$`}</span>
                   </h4>
                   <Image
                     src="/images/grafik_sin_1.png"
@@ -508,32 +471,35 @@ const Explanation = () => {
               </div>
               <div className="flex flex-col-reverse gap-10 lg:even:flex-row lg:odd:flex-row-reverse">
                 <div className="lg:basis-1/2 text-base lg:text-lg">
-                  <h4 className="hidden lg:block text-base lg:text-2xl font-semibold mb-5">
-                    2. y = 2 sin (x - 60)
+                  <h4 className="hidden lg:flex items-center text-base lg:text-2xl font-semibold mb-5">
+                    <span>{String.raw`$$ 2. \space y = 2 \space sin(x - 60) $$`}</span>
                   </h4>
                   <p>Penyelesaian :</p>
-                  <p>y = 2 sin (x - 60)</p>
-                  <div className="grid grid-cols-4 *:pb-1 *:pt-4 mt-5">
-                    <p className="col-start-1">x = 60</p>
+                  <p className="flex justify-start">{String.raw`$$ y = 2 \space sin(x - 60) $$`}</p>
+                  <div className="grid grid-cols-4 mt-5">
+                    <p className="flex justify-start col-start-1">{String.raw`$$ x = 60 $$`}</p>
                     <div className="grid grid-cols-1 col-span-2">
-                      <p>x = 2 sin (60 - 60)</p>
-                      <p>&nbsp; = 2.0</p>
-                      <p>&nbsp; = 0</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 2 \space sin(60 - 60) $$`}</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 2 \space . \space 0 $$`}</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 0 $$`}</p>
                     </div>
 
-                    <p className="col-start-1">x = 150</p>
+                    <p className="flex justify-start col-start-1"></p>
+                    <div className="grid grid-cols-1 col-span-2"></div>
+
+                    <p className="flex justify-start col-start-1">{String.raw`$$ x = 150 $$`}</p>
                     <div className="grid grid-cols-1 col-span-2">
-                      <p>x = 2 sin (150 - 60)</p>
-                      <p>&nbsp; = 2 sin 90</p>
-                      <p>&nbsp; = 2 x 1</p>
-                      <p>&nbsp; = 2</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 2 \space sin(150 - 60) $$`}</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 2 \space sin \space 90 $$`}</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 2 \space  . \space 1 $$`}</p>
+                      <p className="flex justify-start">{String.raw`$$ x = 2 $$`}</p>
                     </div>
                   </div>
                   <p></p>
                 </div>
                 <div className="lg:basis-1/2 w-full h-auto">
                   <h4 className="block lg:hidden text-base lg:text-2xl font-semibold mb-5">
-                    2. y = 2 sin (x - 60)
+                    <span>{String.raw`$$ 2. \space y = 2 \space sin(x - 60) $$`}</span>
                   </h4>
                   <Image
                     src="/images/grafik_sin_2.png"
