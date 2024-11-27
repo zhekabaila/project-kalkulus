@@ -4,7 +4,7 @@ const withPWA = withPWAInit({
   dest: 'public',
 })
 
-const nextConfig = withPWA({
+export default withPWA({
   images: {
     remotePatterns: [
       {
@@ -17,5 +17,3 @@ const nextConfig = withPWA({
   },
   reactStrictMode: true,
 })
-
-export default nextConfig
