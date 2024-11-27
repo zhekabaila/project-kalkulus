@@ -1,6 +1,10 @@
-import type { NextConfig } from 'next'
+import withPWAInit from '@ducanh2912/next-pwa'
 
-const nextConfig: NextConfig = {
+const withPWA = withPWAInit({
+  dest: 'public',
+})
+
+const nextConfig = withPWA({
   images: {
     remotePatterns: [
       {
@@ -11,6 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-}
+  reactStrictMode: true,
+})
 
 export default nextConfig
