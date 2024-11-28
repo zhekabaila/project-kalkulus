@@ -55,11 +55,11 @@ export const projects = [
     image: '/images/projects/fungsi_turunan.png',
   },
   {
-    title: 'Fungsi Linear, Rasional & Irasional',
-    link: 'https://kalkulus-linear.vercel.app/',
+    title: 'Fungsi Logaritma',
+    link: 'https://wafafaujiah28.github.io/fungsi-logaritma-kalkulus1/',
     description:
-      'Website ini dirancang bagi anda yang kesulitan untuk mencari materi pembelajaran kalkulus yang mudah dipahami, dengan anda belajar di website ini anda akan cepat memahami materi dengan struktur materi dan soal lathan yang mudah dipahami.',
-    image: '/images/projects/fungsi_linear_rasional_irasional.png',
+      'Sebelum menuju fungsi logaritma, kami akan memberikan penjelasan pengertian, bentuk umum, persamaan dan pertidaksamaan yang merupakan materi dasar logaritma dengan menyediakan contoh soal yang akan membuat mu lebih mudah memahami! Dalam laman ini kami juga menyediakan kalkulator khusus logaritma yang dapat diakses lho!',
+    image: '/images/projects/fungsi_logaritma.png',
   },
   {
     title: 'Calcourses',
