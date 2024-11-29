@@ -456,7 +456,7 @@ const Explanation = () => {
                   </div>
                 </div>
                 <div className="lg:basis-1/2 w-full h-auto">
-                  <h4 className="block lg:hidden text-base lg:text-2xl font-semibold mb-5">
+                  <h4 className="flex justify-start lg:hidden text-base lg:text-2xl font-semibold mb-5">
                     <span>{String.raw`$$ 1. \space y = sin \space x $$`}</span>
                   </h4>
                   <Image
@@ -498,7 +498,7 @@ const Explanation = () => {
                   <p></p>
                 </div>
                 <div className="lg:basis-1/2 w-full h-auto">
-                  <h4 className="block lg:hidden text-base lg:text-2xl font-semibold mb-5">
+                  <h4 className="flex justify-start lg:hidden text-base lg:text-2xl font-semibold mb-5">
                     <span>{String.raw`$$ 2. \space y = 2 \space sin(x - 60) $$`}</span>
                   </h4>
                   <Image
