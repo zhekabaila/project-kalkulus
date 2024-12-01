@@ -24,7 +24,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode))
-    document.documentElement.className = darkMode ? 'dark' : 'dark'
+    document.documentElement.className = darkMode ? 'dark' : 'light'
   }, [darkMode])
 
   const toggleTheme = () => {
