@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { AiOutlineSend } from 'react-icons/ai'
 
+//? Katex
+import 'katex/dist/katex.min.css'
+import TeX from '@matejmazur/react-katex'
+
 const Questions = () => {
   const correctAnswers = {
     soal_1: 'A',
@@ -49,10 +53,11 @@ const Questions = () => {
         <ul className="space-y-9">
           <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
-              1. Tentukan periode fungsi y = 2 + 5 cos 2x
+              1. Tentukan periode fungsi{' '}
+              <TeX math="y = 2 + 5 \space cos \space 2x" block={false} />
             </h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              <li className=" flex items-center gap-x-3">
+              <li className="flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_A_1"
                   className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
@@ -66,7 +71,7 @@ const Questions = () => {
                     id="pilihan_A_1"
                     className="accent-primary dark:accent-white"
                   />
-                  180&deg;
+                  <TeX math="180&deg;" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -83,7 +88,7 @@ const Questions = () => {
                     id="pilihan_B_1"
                     className="accent-primary dark:accent-white"
                   />
-                  240&deg;
+                  <TeX math="240&deg;" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -100,7 +105,7 @@ const Questions = () => {
                     id="pilihan_C_1"
                     className="accent-primary dark:accent-white"
                   />
-                  120&deg;
+                  <TeX math="120&deg;" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -117,7 +122,7 @@ const Questions = () => {
                     id="pilihan_D_1"
                     className="accent-primary dark:accent-white"
                   />
-                  140&deg;
+                  <TeX math="140&deg;" block={false} />
                 </label>
               </li>
             </ul>
@@ -125,10 +130,11 @@ const Questions = () => {
 
           <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
-              2. Nilai maksimum fungsi y = -8 cos (x - 10)
+              2. Nilai maksimum fungsi{' '}
+              <TeX math="y = -8 \space cos \space (x - 10)" block={false} />
             </h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-              <li className=" flex items-center gap-x-3">
+              <li className="flex items-center gap-x-3">
                 <label
                   htmlFor="pilihan_A_2"
                   className="text-sm lg:text-base flex items-center gap-x-4 transition-all duration-300 ease-in-out p-3 rounded-lg bg-white dark:bg-shadow has-[:checked]:bg-primary dark:has-[:checked]:bg-jeruk has-[:checked]:text-sun w-full cursor-pointer"
@@ -142,7 +148,7 @@ const Questions = () => {
                     id="pilihan_A_2"
                     className="accent-primary dark:accent-white"
                   />
-                  -8
+                  <TeX math="-8" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -159,7 +165,7 @@ const Questions = () => {
                     id="pilihan_B_2"
                     className="accent-primary dark:accent-white"
                   />
-                  0
+                  <TeX math="0" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -176,7 +182,7 @@ const Questions = () => {
                     id="pilihan_C_2"
                     className="accent-primary dark:accent-white"
                   />
-                  8
+                  <TeX math="8" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -193,7 +199,7 @@ const Questions = () => {
                     id="pilihan_D_2"
                     className="accent-primary dark:accent-white"
                   />
-                  10
+                  <TeX math="10" block={false} />
                 </label>
               </li>
             </ul>
@@ -201,8 +207,14 @@ const Questions = () => {
 
           <li className="relative space-y-7 lg:space-y-7 bg-slate-300/20 dark:bg-gray-600/20 backdrop-blur-lg rounded-xl border-2 border-slate-400/20 dark:border-gray-600/30 p-6 lg:p-16">
             <h4 className="text-base lg:text-lg font-semibold">
-              3. Pada interval 0&deg; &le; x &le; 120&deg;, titik maksimum dari
-              y = 2 sin (3x – 30) adalah…
+              3. Pada interval{' '}
+              <TeX math="0&deg; \le x \le 120&deg;" block={false} />, titik
+              maksimum dari{' '}
+              <TeX
+                math="y = 2 \space sin \space (3x \space – \space 30)"
+                block={false}
+              />{' '}
+              adalah…
             </h4>
             <ul className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               <li className=" flex items-center gap-x-3">
@@ -219,7 +231,7 @@ const Questions = () => {
                     id="pilihan_A_3"
                     className="accent-primary dark:accent-white"
                   />
-                  (90&deg;, 1)
+                  <TeX math="(90&deg;, 1)" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -236,7 +248,7 @@ const Questions = () => {
                     id="pilihan_B_3"
                     className="accent-primary dark:accent-white"
                   />
-                  (90&deg;, 2)
+                  <TeX math="(90&deg;, 2)" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -253,7 +265,7 @@ const Questions = () => {
                     id="pilihan_C_3"
                     className="accent-primary dark:accent-white"
                   />
-                  (30&deg;, 2)
+                  <TeX math="(30&deg;, 1)" block={false} />
                 </label>
               </li>
               <li className=" flex items-center gap-x-3">
@@ -270,7 +282,7 @@ const Questions = () => {
                     id="pilihan_D_3"
                     className="accent-primary dark:accent-white"
                   />
-                  (40&deg;, 2)
+                  <TeX math="(40&deg;, 2)" block={false} />
                 </label>
               </li>
             </ul>
@@ -308,25 +320,14 @@ const Questions = () => {
                     <div className="grid grid-cols-1 gap-y-2">
                       <p className="">Penjelasan :</p>
                       <p className=" flex items-center gap-x-2">
-                        Periode =
-                        <span className="flex flex-col items-center justify-center text-center">
-                          <span className="">360&deg;</span>
-                          <span className="border-t border-t-[#3d4048] dark:border-t-sun w-full">
-                            n
-                          </span>
-                        </span>
+                        Periode = <TeX math="360&deg; \over n" block={false} />
                       </p>
                       <p className=" flex items-center gap-x-2">
                         Periode =
-                        <span className="flex flex-col items-center justify-center text-center">
-                          <span className="">360&deg;</span>
-                          <span className="border-t border-t-[#3d4048] dark:border-t-sun w-full">
-                            2
-                          </span>
-                        </span>
+                        <TeX math="360&deg; \over 2" block={false} />
                       </p>
                       <p className=" flex items-center gap-x-2">
-                        Periode = <span>180&deg;</span>
+                        Periode = <TeX math="180&deg;" block={false} />
                       </p>
                     </div>
                   </div>
@@ -346,13 +347,16 @@ const Questions = () => {
                     <div className="grid grid-cols-1 gap-y-2">
                       <p className="">Penjelasan :</p>
                       <p className=" flex items-center gap-x-2">
-                        y = -8 cos (x - 10)
+                        <TeX
+                          math="y = -8 \space cos \space (x - 10)"
+                          block={false}
+                        />
                       </p>
                       <p className=" flex items-center gap-x-2">
-                        Nilai Minimum = -8
+                        Nilai Minimum = <TeX math="-8" block={false} />
                       </p>
                       <p className=" flex items-center gap-x-2">
-                        Nilai Maksimum = 8
+                        Nilai Maksimum = <TeX math="8" block={false} />
                       </p>
                     </div>
                   </div>
@@ -372,18 +376,23 @@ const Questions = () => {
                     <div className="grid grid-cols-1 gap-y-2">
                       <p className="">Penjelasan :</p>
                       <p className=" flex items-center gap-x-2">
-                        sin(3x - 30) = 1
+                        <TeX math="sin(3x - 30) = 1" block={false} />
                       </p>
                       <p className=" flex items-center gap-x-2">
-                        sin(3x - 30) = sin 90&deg;
+                        <TeX
+                          math="sin(3x - 30) = sin \space 90&deg;"
+                          block={false}
+                        />
                       </p>
                       <p className=" flex items-center gap-x-2">
-                        3x - 30 = 90&deg;
+                        <TeX math="3x - 30 = 90&deg;" block={false} />
                       </p>
                       <p className=" flex items-center gap-x-2">
-                        3x = 120&deg;
+                        <TeX math="3x = 120&deg;" block={false} />
                       </p>
-                      <p className=" flex items-center gap-x-2">x = 40&deg;</p>
+                      <p className=" flex items-center gap-x-2">
+                        <TeX math="x = 40&deg;" block={false} />
+                      </p>
                     </div>
                   </div>
                 </div>

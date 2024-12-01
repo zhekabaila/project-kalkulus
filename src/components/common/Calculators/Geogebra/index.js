@@ -2,6 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+//? Katex
+import 'katex/dist/katex.min.css'
+import TeX from '@matejmazur/react-katex'
+
 const GeogebraCalculator = () => {
   const ggbElementRef = useRef(null)
   const [ggbApplet, setGgbApplet] = useState(null)
@@ -67,14 +71,19 @@ const GeogebraCalculator = () => {
       <div className="flex flex-col gap-5">
         <div className="bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">
           <p>
-            y = <b>{fungsi.amplitudo || 'a'}</b> <b>{fungsi.fungsi}</b>(
-            <b>{fungsi.frekuensi || 'k'}</b>
-            <i>x</i> <b>{fungsi.fase || '+ b'}</b>){' '}
-            <b>{fungsi.pergeseranVertikal || '+ c'}</b>
+            <TeX
+              math={`
+              y = ${fungsi.amplitudo || 'a'} \\ ${fungsi.fungsi}(
+            ${fungsi.frekuensi || 'k'}
+            x ${fungsi.fase || '+ b'})
+            ${fungsi.pergeseranVertikal || '+ c'}
+            `}
+              block={false}
+            />
           </p>
         </div>
         <div className="flex items-center bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">
-          <p>y = </p>
+          <TeX math="y = " block={false} />
           <input
             type="text"
             className="ml-2 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -114,7 +123,7 @@ const GeogebraCalculator = () => {
               })
             }}
           />
-          (
+          <TeX math="(" block={false} />
           <input
             type="text"
             className="bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -135,7 +144,7 @@ const GeogebraCalculator = () => {
               })
             }}
           />
-          <i>x</i>
+          <TeX math="x" block={false} />
           <input
             type="text"
             className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -156,7 +165,7 @@ const GeogebraCalculator = () => {
               })
             }}
           />
-          )
+          <TeX math=")" block={false} />
           <input
             type="text"
             className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -187,32 +196,49 @@ const GeogebraCalculator = () => {
         {showPenjelasan && (
           <div className="mt-12">
             <h4 className="text-base lg:text-lg font-semibold tracking-widest">
-              y = {fungsi.amplitudo} {fungsi.fungsi}({fungsi.frekuensi}x
-              {fungsi.fase ? `${fungsi.fase}` : ''}){' '}
-              {fungsi.pergeseranVertikal ? `${fungsi.pergeseranVertikal}` : ''}
+              <TeX
+                math={`
+                  y = ${fungsi.amplitudo} \\ ${fungsi.fungsi}(${
+                  fungsi.frekuensi
+                }x
+                  ${fungsi.fase ? `${fungsi.fase}` : ''})
+                  ${
+                    fungsi.pergeseranVertikal
+                      ? `${fungsi.pergeseranVertikal}`
+                      : ''
+                  }
+            `}
+                block={false}
+              />
             </h4>
             <h4 className="text-base lg:text-lg font-semibold">Penjelasan:</h4>
             <div className="grid grid-cols-6 gap-2 mt-5">
               {fungsi.amplitudo && (
                 <>
                   <p className="font-medium text-sm lg:text-base">
-                    |{fungsi.amplitudo || 'a'}|
+                    <TeX math={`|${fungsi.amplitudo || 'a'}|`} block={false} />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah Amplitudo
                   </p>
 
                   <p className="font-medium text-sm lg:text-base">
-                    |{fungsi.amplitudo || 'a'}|{' '}
-                    {fungsi.pergeseranVertikal ?? fungsi.pergeseranVertikal}
+                    <TeX
+                      math={`|${fungsi.amplitudo || 'a'}| \\
+                    ${fungsi.pergeseranVertikal ?? fungsi.pergeseranVertikal}`}
+                      block={false}
+                    />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah nilai maksimum
                   </p>
 
                   <p className="font-medium text-sm lg:text-base">
-                    -|{fungsi.amplitudo || 'a'}|{' '}
-                    {fungsi.pergeseranVertikal ?? fungsi.pergeseranVertikal}
+                    <TeX
+                      math={`-|${fungsi.amplitudo || 'a'}| \\
+                    ${fungsi.pergeseranVertikal ?? fungsi.pergeseranVertikal}`}
+                      block={false}
+                    />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah nilai minimum
@@ -223,7 +249,7 @@ const GeogebraCalculator = () => {
               {fungsi.fungsi && (
                 <>
                   <p className="font-medium text-sm lg:text-base">
-                    {fungsi.fungsi || 'sin'}
+                    <TeX math={`${fungsi.fungsi || 'sin'}`} block={false} />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah Fungsi
@@ -234,7 +260,7 @@ const GeogebraCalculator = () => {
               {fungsi.frekuensi && (
                 <>
                   <p className="font-medium text-sm lg:text-base">
-                    {fungsi.frekuensi || 'k'}
+                    <TeX math={`${fungsi.frekuensi || 'k'}`} block={false} />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah Frekuensi
@@ -245,7 +271,12 @@ const GeogebraCalculator = () => {
               {fungsi.fase && (
                 <>
                   <p className="font-medium text-sm lg:text-base">
-                    {fungsi.fase.trim().replace(/[+\-/*]/, '') || 'b'}
+                    <TeX
+                      math={`${
+                        fungsi.fase.trim().replace(/[+\-/*]/, '') || 'b'
+                      }`}
+                      block={false}
+                    />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah Fase
@@ -256,8 +287,14 @@ const GeogebraCalculator = () => {
               {fungsi.pergeseranVertikal && (
                 <>
                   <p className="font-medium text-sm lg:text-base">
-                    {fungsi.pergeseranVertikal.trim().replace(/[+\-/*]/, '') ||
-                      'c'}
+                    <TeX
+                      math={`${
+                        fungsi.pergeseranVertikal
+                          .trim()
+                          .replace(/[+\-/*]/, '') || 'c'
+                      }`}
+                      block={false}
+                    />
                   </p>
                   <p className="col-span-5 text-sm lg:text-base">
                     : Adalah Pergeseran Vertikal

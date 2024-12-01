@@ -2,7 +2,6 @@ import { ThemeProvider } from '@/contexts/themeContext'
 import { Poppins } from 'next/font/google'
 import dynamic from 'next/dynamic'
 import './globals.css'
-import Script from 'next/script'
 
 import type { Metadata, Viewport } from 'next'
 
@@ -69,12 +68,6 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-        <Script
-          type="text/javascript"
-          id="MathJax-script"
-          async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-        />
         <body
           className={`${poppins.className} antialiased bg-secondary dark:bg-shadow max-w-[2400px] mx-auto`}
         >

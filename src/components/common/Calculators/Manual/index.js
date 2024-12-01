@@ -4,6 +4,10 @@ import { useTheme } from '@/contexts/themeContext'
 import { useRef, useState, useEffect } from 'react'
 import { MdZoomIn, MdZoomOut } from 'react-icons/md'
 
+//? Katex
+import 'katex/dist/katex.min.css'
+import TeX from '@matejmazur/react-katex'
+
 const ManualCalculator = () => {
   const { darkMode } = useTheme()
   const canvasRef = useRef(null)
@@ -180,20 +184,19 @@ const ManualCalculator = () => {
         <div className="flex flex-col gap-5">
           <div className="bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">
             <p>
-              y = <b>{inputs.amplitude || 'a'}</b> <b>{inputs.function}</b>(
-              <b>{inputs.frequency || 'k'}</b>
-              <i>x</i>{' '}
-              <b>
-                {inputs.phaseSymbol} {inputs.phase || 'b'}
-              </b>
-              ){' '}
-              <b>
-                {inputs.verticalShiftSymbol} {inputs.verticalShift || 'c'}
-              </b>
+              <TeX
+                math={`
+y = ${inputs.amplitude || 'a'} \\ ${inputs.function}(${
+                  inputs.frequency || 'k'
+                }x ${inputs.phaseSymbol} ${inputs.phase || 'b'})${
+                  inputs.verticalShiftSymbol
+                } ${inputs.verticalShift || 'c'}`}
+                block={false}
+              />
             </p>
           </div>
           <div className="flex items-center bg-white/10 dark:bg-gray-600/20 backdrop-blur-md rounded-md border-2 border-gray-600/30 p-4 tracking-widest">
-            <p>y = </p>
+            <TeX math="y = " block={false} />
             <input
               type="text"
               className="ml-2 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -218,7 +221,7 @@ const ManualCalculator = () => {
               value={inputs.function}
               onChange={handleInputChange}
             />
-            (
+            <TeX math="(" block={false} />
             <input
               type="text"
               className="bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
@@ -231,7 +234,7 @@ const ManualCalculator = () => {
               value={inputs.frequency}
               onChange={handleInputChange}
             />
-            <i>x</i>
+            <TeX math="x" block={false} />
             <select
               className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
               style={{
@@ -257,7 +260,7 @@ const ManualCalculator = () => {
               value={inputs.phase}
               onChange={handleInputChange}
             />
-            )
+            <TeX math=")" block={false} />
             <select
               className="ml-3 bg-transparent border-b-2 border-b-primary dark:border-b-jeruk outline-none p-0 font-semibold"
               style={{
@@ -293,11 +296,16 @@ const ManualCalculator = () => {
           {showPenjelasan && (
             <div className="mt-12">
               <h4 className="text-base lg:text-lg font-semibold tracking-widest">
-                y = {inputs.amplitude} {inputs.function}({inputs.frequency}x
-                {inputs.phase && ' ' + inputs.phaseSymbol + ' '}
-                {inputs.phase ? inputs.phase : ''}){' '}
-                {inputs.verticalShift && inputs.verticalShiftSymbol}{' '}
-                {inputs.verticalShift ? inputs.verticalShift : ''}
+                <TeX
+                  math={`y = ${inputs.amplitude} \\ ${inputs.function}(${
+                    inputs.frequency
+                  }x
+  ${inputs.phase && ' ' + inputs.phaseSymbol + ' '}
+  ${inputs.phase ? inputs.phase : ''})
+  ${inputs.verticalShift && inputs.verticalShiftSymbol}
+  ${inputs.verticalShift ? inputs.verticalShift : ''}`}
+                  block={false}
+                />
               </h4>
               <h4 className="text-base lg:text-lg font-semibold">
                 Penjelasan:
@@ -306,25 +314,34 @@ const ManualCalculator = () => {
                 {inputs.amplitude && (
                   <>
                     <p className="font-medium text-sm lg:text-base">
-                      |{inputs.amplitude || 'a'}|
+                      <TeX
+                        math={`|${inputs.amplitude || 'a'}|`}
+                        block={false}
+                      />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah Amplitudo
                     </p>
 
                     <p className="font-medium text-sm lg:text-base">
-                      |{inputs.amplitude || 'a'}|{' '}
-                      {inputs.verticalShift && inputs.verticalShiftSymbol}
-                      {inputs.verticalShift ?? inputs.verticalShift}
+                      <TeX
+                        math={`|${inputs.amplitude || 'a'}|
+              ${inputs.verticalShift && inputs.verticalShiftSymbol}
+              ${inputs.verticalShift ?? inputs.verticalShift}`}
+                        block={false}
+                      />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah nilai maksimum
                     </p>
 
                     <p className="font-medium text-sm lg:text-base">
-                      -|{inputs.amplitude || 'a'}|{' '}
-                      {inputs.verticalShift && inputs.verticalShiftSymbol}
-                      {inputs.verticalShift ?? inputs.verticalShift}
+                      <TeX
+                        math={`-|${inputs.amplitude || 'a'}|
+              ${inputs.verticalShift && inputs.verticalShiftSymbol}
+              ${inputs.verticalShift ?? inputs.verticalShift}`}
+                        block={false}
+                      />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah nilai minimum
@@ -335,7 +352,7 @@ const ManualCalculator = () => {
                 {inputs.function && (
                   <>
                     <p className="font-medium text-sm lg:text-base">
-                      {inputs.function || 'sin'}
+                      <TeX math={`${inputs.function || 'sin'}`} block={false} />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah Fungsi
@@ -346,7 +363,7 @@ const ManualCalculator = () => {
                 {inputs.frequency && (
                   <>
                     <p className="font-medium text-sm lg:text-base">
-                      {inputs.frequency || 'k'}
+                      <TeX math={`${inputs.frequency || 'k'}`} block={false} />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah Frekuensi
@@ -357,7 +374,12 @@ const ManualCalculator = () => {
                 {inputs.phase && (
                   <>
                     <p className="font-medium text-sm lg:text-base">
-                      {inputs.phase.trim().replace(/[+\-/*]/, '') || 'b'}
+                      <TeX
+                        math={`${
+                          inputs.phase.trim().replace(/[+\-/*]/, '') || 'b'
+                        }`}
+                        block={false}
+                      />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah Fase
@@ -368,8 +390,13 @@ const ManualCalculator = () => {
                 {inputs.verticalShift && (
                   <>
                     <p className="font-medium text-sm lg:text-base">
-                      {inputs.verticalShift.trim().replace(/[+\-/*]/, '') ||
-                        'c'}
+                      <TeX
+                        math={`${
+                          inputs.verticalShift.trim().replace(/[+\-/*]/, '') ||
+                          'c'
+                        }`}
+                        block={false}
+                      />
                     </p>
                     <p className="col-span-5 text-sm lg:text-base">
                       : Adalah Pergeseran Vertikal
