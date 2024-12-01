@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <html lang="en">
+      <html lang="en" className="dark">
         <Script
           type="text/javascript"
           id="MathJax-script"
