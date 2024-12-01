@@ -23,9 +23,9 @@ const TeamCard = ({
         <div className="rounded-full object-center object-cover basis-1/4">
           <Image
             src={img}
-            width={100}
-            height={100}
-            alt="a"
+            width={500}
+            height={500}
+            alt={`${name} photo`}
             loading="lazy"
             className="rounded-full size-full aspect-square object-cover object-center"
           />
