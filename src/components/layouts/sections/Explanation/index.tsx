@@ -5,6 +5,10 @@ import TrignonemetryTable from '@/components/common/Table/Trigonometri'
 import ExplanationCard from '@/components/common/Cards/Explanation'
 import Link from 'next/link'
 
+//? Katex
+import 'katex/dist/katex.min.css'
+import TeX from '@matejmazur/react-katex'
+
 const Explanation = () => {
   const { darkMode } = useTheme()
 
@@ -98,7 +102,11 @@ const Explanation = () => {
                 <ul className="mt-4 space-y-2">
                   <li>
                     <p className="flex justify-start">
-                      {String.raw`$$sin^2 \theta + cos^2 \theta = 1$$`}
+                      <TeX
+                        math="sin^2 \theta + cos^2 \theta = 1"
+                        block={false}
+                      />
+                      {/* {String.raw`$$sin^2 \theta + cos^2 \theta = 1$$`} */}
                     </p>
                   </li>
                   <li>
@@ -252,7 +260,7 @@ const Explanation = () => {
                   </li>
                   <li>
                     <b>Contoh:</b> Pada grafik{' '}
-                    <span>{String.raw`$$ y = 2 \space sin \space x$$`}</span>{' '}
+                    <TeX math="y = 2 \space sin \space x" block={false} />,
                     amplitudo adalah 2, yang berarti grafik akan mencapai nilai
                     maksimum 2 dan minimum -2.
                   </li>
@@ -269,9 +277,10 @@ const Explanation = () => {
                     berulang kembali.
                   </li>
                   <li>
-                    <b>Fungsi sinus dan kosinus</b> memiliki periode standar 2π,
-                    artinya grafik akan mengulang pola setiap 2π satuan pada
-                    sumbu x.
+                    <b>Fungsi sinus dan kosinus</b> memiliki periode standar{' '}
+                    <TeX math="2\pi" block={false} />, artinya grafik akan
+                    mengulang pola setiap <TeX math="2\pi" block={false} />{' '}
+                    satuan pada sumbu <TeX math="x" block={false} />.
                   </li>
                   <li>
                     <b>Fungsi tangen</b> memiliki periode standar π/piπ, karena
