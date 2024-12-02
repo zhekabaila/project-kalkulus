@@ -68,4 +68,11 @@ export const projects = [
       'Calcourses hadir sebagai solusi pembelajaran Kalkulus I yang interaktif dan mudah diakses, dengan fokus pada materi dasar seperti fungsi linear, kuadrat, dan kubik. Platform ini dirancang untuk membantu mahasiswa dan pelajar memahami konsep kalkulus melalui kombinasi materi terstruktur, latihan soal, dan visualisasi grafik yang dapat digenerate secara otomatis. ',
     image: '/images/projects/fungsi.png',
   },
+  {
+    title: 'Fungsi Persamaan Kuadrat',
+    link: 'https://fungsi-kuadrat.vercel.app/',
+    description:
+      'Pengertian dari fungsi kuadrat adalah sebuah fungsi polinomial atau suku banyak dimana pangkat tertinggi dari variable atau peubahnya adalah 2. Maka, bentuk umum dari fungsi kuadrat mendekati persamaan kuadrat.',
+    image: '/images/projects/fungsi_persamaan_kuadrat.png',
+  },
 ]
